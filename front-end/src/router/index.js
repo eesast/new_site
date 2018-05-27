@@ -20,11 +20,11 @@ export default new Router({
       name: 'Index',
       component: Index
     },
-    {
+    /*{
       path: '/join',
       name: 'Join',
       component: Register
-    },
+    },*/
     {
       path: '/intro',
       component: intro,
