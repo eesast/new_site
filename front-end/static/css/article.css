@@ -1,0 +1,48 @@
+.wrap{
+    margin: 0;
+    width: 100%;
+}
+.content {
+    margin: 100px auto;
+    padding: 30px 10% 80px;
+    width: 65%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    text-indent: 2em;
+    text-align: justify;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+h4 {
+    text-indent: 0;
+    font-size: 1.3em;
+    margin-bottom: 12px;
+}
+h5 {
+    text-indent: 0.5em;
+    font-size: 1.05em;
+    margin-top:16px;
+    margin-bottom: 12px;
+}
+h6{
+    text-indent: 1.3em;
+    font-size: 1.0em;
+    margin-top:6px;
+    margin-bottom: 6px;
+}
+h4+p{
+    margin-top: 12px;
+}
+img {
+    width: 90%; 
+    margin: 12px auto 0;
+}
+.ia {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    font-size: 0.8em;
+    text-align: center;
+}
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
