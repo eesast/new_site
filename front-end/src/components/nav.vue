@@ -11,8 +11,8 @@
   active-text-color="#ffd04b">
   <div class="top">
     <img src="..\..\static\EESAST2017_mini.jpg">
-    <div>
-      <h2>清华大学电子工程系学生科学技术协会</h2>
+    <div id="title">
+      <h2>清华大学电子工程系学生科协</h2>
       <h3>Student Association of Science and Technology</h3>
     </div>
     
@@ -34,11 +34,11 @@
   </el-submenu>
   <el-submenu index="3">
     <template slot="title" route="">赛事</template>
-    <el-menu-item index="2-1" route="">队式设计大赛</el-menu-item>
-    <el-menu-item index="2-2" route="">电子设计大赛</el-menu-item>
-    <el-menu-item index="2-3" route="">硬件设计大赛</el-menu-item>
-    <el-menu-item index="2-4" route="">挑战杯</el-menu-item>
-    <el-menu-item index="2-5" route="">ADI杯新生知识竞赛</el-menu-item>
+    <el-menu-item index="3-1" route="">队式设计大赛</el-menu-item>
+    <el-menu-item index="3-2" route="">电子设计大赛</el-menu-item>
+    <el-menu-item index="3-3" route="">硬件设计大赛</el-menu-item>
+    <el-menu-item index="3-4" route="">挑战杯</el-menu-item>
+    <el-menu-item index="3-5" route="">ADI杯新生知识竞赛</el-menu-item>
   </el-submenu>
   <el-menu-item index="4" route="">SAST-Weekly</el-menu-item>
   <el-menu-item index="5">注册</el-menu-item>
@@ -68,9 +68,18 @@ export default {
 .top {
     display: flex;
 }
-.top h2,.top h3{
-    margin: auto 0;
-    color: white;
+.top img{
+  width: 5%;
+  height: 5%;
+  margin: 0;
+}
+div#title{
+  text-align: left;
+  padding-left: 1%;
+}
+#title h2,#title h3{
+  margin: 1% 0;
+  color: white;
 }
 
 </style>
