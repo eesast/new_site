@@ -17,21 +17,30 @@
     </div>
     
   </div>
-  <el-menu-item index="1">首页</el-menu-item>
-  <el-submenu index="2">
-    <template slot="title">我的工作台</template>
-    <el-menu-item index="2-1">选项1</el-menu-item>
-    <el-menu-item index="2-2">选项2</el-menu-item>
-    <el-menu-item index="2-3">选项3</el-menu-item>
-    <el-submenu index="2-4">
+  <el-menu-item index="1" route="">首页</el-menu-item>
+  <el-submenu index="2" route="">
+    <template slot="title" route="">部门</template>
+    <el-menu-item index="2-1" route="">学培部</el-menu-item>
+    <el-menu-item index="2-2" route="">软件部</el-menu-item>
+    <el-menu-item index="2-3" route="">硬件部</el-menu-item>
+    <el-menu-item index="2-4" route="">项目部</el-menu-item>
+    <el-menu-item index="2-5" route="">宣策部</el-menu-item>
+    <!--el-submenu index="2-4">
       <template slot="title">选项4</template>
       <el-menu-item index="2-4-1">选项1</el-menu-item>
       <el-menu-item index="2-4-2">选项2</el-menu-item>
       <el-menu-item index="2-4-3">选项3</el-menu-item>
-    </el-submenu>
+    </el-submenu-->
   </el-submenu>
-  <el-menu-item index="3">消息中心</el-menu-item>
-  <el-menu-item index="4"><a href="" target="_blank">订单管理</a></el-menu-item>
+  <el-submenu index="3">
+    <template slot="title" route="">赛事</template>
+    <el-menu-item index="2-1" route="">队式设计大赛</el-menu-item>
+    <el-menu-item index="2-2" route="">电子设计大赛</el-menu-item>
+    <el-menu-item index="2-3" route="">硬件设计大赛</el-menu-item>
+    <el-menu-item index="2-4" route="">挑战杯</el-menu-item>
+    <el-menu-item index="2-5" route="">ADI杯新生知识竞赛</el-menu-item>
+  </el-submenu>
+  <el-menu-item index="4" route="">SAST-Weekly</el-menu-item>
   <el-menu-item index="5">注册</el-menu-item>
   <el-menu-item index="6">登录</el-menu-item>
   </el-menu>

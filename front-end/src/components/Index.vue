@@ -1,8 +1,14 @@
 <template>
   <div class="hello">
-    <el-carousel :interval="10000" type="card" height="600px">
-      <el-carousel-item v-for="item in 6" :key="item">
-        <h3>{{ item }}</h3>
+    <el-carousel :interval="10000" type="card" height="500px">
+      <el-carousel-item>
+        <img src="../../static/teamstyle.png" width="75%">
+      </el-carousel-item>
+      <el-carousel-item>
+        <img src="../../static/teamstyle-2.png" width="100%">
+      </el-carousel-item>
+      <el-carousel-item>
+        <img src="../../static/software.png" width="100%">
       </el-carousel-item>
     </el-carousel>
     <el-container>
@@ -11,7 +17,7 @@
         <el-card class="box-card">
           <div>
             <i class="el-icon-document"></i>
-            <p>网宣部</p>
+            <p>学培部</p>
           </div>
         </el-card>
         <el-card class="box-card">
@@ -29,13 +35,13 @@
         <el-card class="box-card">
           <div>
             <i class="el-icon-document"></i>
-            <p>学培部</p>
+            <p>项目部</p>
           </div>
         </el-card>
         <el-card class="box-card">
           <div>
             <i class="el-icon-document"></i>
-            <p>项目部</p>
+            <p>宣策部</p>
           </div>
         </el-card>
       </el-aside>
@@ -135,10 +141,6 @@ i {
     margin: 0;
   }
   
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-  
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
@@ -172,9 +174,7 @@ i {
     min-height: 36px;
     align-items: center;
   }
-  .learn {
 
-  }
   .row-bg {
     padding: 10px 0;
     background-color: #f9fafc;
