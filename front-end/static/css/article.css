@@ -12,6 +12,9 @@
     box-sizing: border-box;
     border-radius: 2px;
 }
+.article {
+    width: 100%;
+}
 h4 {
     text-indent: 0;
     font-size: 1.3em;
@@ -32,8 +35,14 @@ h6{
 h4+p{
     margin-top: 12px;
 }
+.img-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 img {
-    width: 90%; 
+    width: 95%; 
     margin: 12px auto 0;
 }
 .ia {
