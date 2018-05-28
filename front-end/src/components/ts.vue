@@ -20,6 +20,7 @@
             </div>
             <div class="img-wrap">
                 <img src='../../static/img/ts-3.png'/>
+                <p class='ia'>2018年，队式十九作为A1组比赛合并到THU-AI中</p>
             </div>
         </div>
     </div>
