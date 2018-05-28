@@ -120,7 +120,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import url("//unpkg.com/element-ui@2.3.4/lib/theme-chalk/index.css");
 
 h1, h2 {
   font-weight: normal;
