@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/Index'
 import Register from '@/components/register'
-import intro from '@/components/intro/IntroTitle'
 import ADI from '@/components/intro/ADI'
 import ts from '@/components/intro/ts'
 import hdc from '@/components/intro/hdc'
@@ -27,10 +26,6 @@ export default new Router({
       name: 'Join',
       component: Register
     },*/
-    {
-      path: '/intro',
-      component: intro,
-    },
     {
       path: '/intro/ADI',
       component: ADI
