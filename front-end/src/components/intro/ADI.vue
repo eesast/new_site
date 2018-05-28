@@ -17,15 +17,17 @@
             <p>
                往年奖品包括小米手环、极路由、蓝牙音箱、扫地机器人、打印机、移动硬盘等等，同时观赛亦有机会获得观众奖。 
             </p>
-            <img src='../../static/img/ADI-1.jpg'/>
-            <p class='ia'>第十五届决赛照片</p>
+            <div class='img-wrap'>
+                <img src='../../../static/img/ADI-1.jpg'/>
+                <p class='ia'>第十五届决赛照片</p>
+            </div>
         </div>
     </div>
 </div>
 </template>
 
 <script>
-import '../../static/css/article.css';
+import '../../../static/css/article.css';
 import IntroTitle from './IntroTitle';
 export default {
   name: 'ADI',

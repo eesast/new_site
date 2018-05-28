@@ -13,17 +13,17 @@
                 </p>
                 <h4>精彩回顾</h4>
                 <p>2017年硬件设计大赛作品：</p>
-                <img src='../../static/img/hdc-1.jpg'/>
-                <img src='../../static/img/hdc-2.jpg'/>
-                <img src='../../static/img/hdc-3.jpg'/>
-                <img src='../../static/img/hdc-4.jpg'/>
+                <img src='../../../static/img/hdc-1.jpg'/>
+                <img src='../../../static/img/hdc-2.jpg'/>
+                <img src='../../../static/img/hdc-3.jpg'/>
+                <img src='../../../static/img/hdc-4.jpg'/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import '../../static/css/article.css';
+import '../../../static/css/article.css';
 import IntroTitle from './IntroTitle';
 export default {
   name: 'hdc',

@@ -6,11 +6,14 @@
     margin: 100px auto;
     padding: 30px 10% 80px;
     width: 65%;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    box-shadow: 1px 3px 5px 2px rgba(0,0,0,.26);
     text-indent: 2em;
     text-align: justify;
     box-sizing: border-box;
     border-radius: 2px;
+}
+.article {
+    width: 100%;
 }
 h4 {
     text-indent: 0;
@@ -32,8 +35,14 @@ h6{
 h4+p{
     margin-top: 12px;
 }
+.img-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 img {
-    width: 90%; 
+    width: 95%; 
     margin: 12px auto 0;
 }
 .ia {
@@ -43,6 +52,9 @@ img {
     text-align: center;
 }
 p {
+    margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    display: block;
+    text-indent: 2em;
 }

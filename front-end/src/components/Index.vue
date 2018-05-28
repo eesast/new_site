@@ -1,13 +1,13 @@
 <template>
   <div class="hello">
     <el-carousel :interval="10000" type="card" height="500px">
-      <el-carousel-item>
+      <el-carousel-item id="teamstyle1">
         <img src="../../static/teamstyle.png" width="75%">
       </el-carousel-item>
-      <el-carousel-item>
+      <el-carousel-item id="teamstyle2">
         <img src="../../static/teamstyle-2.png" width="100%">
       </el-carousel-item>
-      <el-carousel-item>
+      <el-carousel-item id="software">
         <img src="../../static/software.png" width="100%">
       </el-carousel-item>
     </el-carousel>
@@ -52,8 +52,8 @@
           <el-col :span="16">
             <div class="grid-content light-blue">
               <div class="theme-disc">
-                <h3>讲座</h3>
-                <p>讲座</p>
+                <h3>活动</h3>
+                <p>活动</p>
               </div>
               <img src="../assets/logo.png">
             </div>
@@ -65,8 +65,23 @@
           </el-col>
         </el-row>
 
-        
         <el-row>
+          <el-col :span="16">
+            <div class="grid-content light-blue">
+              <div class="theme-disc">
+                <h3>SAST-Weekly</h3>
+                <p>SAST-Weekly</p>
+              </div>
+              <img src="../assets/logo.png">
+            </div>
+          </el-col>
+          <el-col :span="8">
+            <div class="grid-content learn">
+              <el-button>了解更多</el-button>
+            </div>
+          </el-col>
+        </el-row>
+        <!--el-row>
           <el-col :span="8">
             <div class="grid-content">
               <el-button>了解更多</el-button>
@@ -82,14 +97,14 @@
               
             </div>
           </el-col>
-        </el-row>
+        </el-row-->
 
         <el-row>
           <el-col :span="16">
             <div class="grid-content light-blue">
               <div class="theme-disc">
-                <h3>SAST WEEKLY</h3>
-                <p>SAST WEEKLY</p>
+                <h3>讲座</h3>
+                <p>讲座</p>
               </div>
               <img src="../assets/logo.png">
             </div>
@@ -120,6 +135,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/*@import url("//unpkg.com/element-ui@2.3.4/lib/theme-chalk/index.css");*/
 
 h1, h2 {
   font-weight: normal;
@@ -140,13 +156,22 @@ i {
     margin: 0;
   }
   
-  .el-carousel__item:nth-child(2n+1) {
+  .el-carousel__item#teamstyle1 {
     background-color: #d3dce6;
   }
 .box-card {
   width: 80%;
-  margin: 0 auto;
+  margin: 15px auto;
 }
+
+.box-card div{
+  text-align: center;
+}
+.box-card:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .el-row {
     margin-bottom: 20px;
   }
@@ -155,6 +180,7 @@ i {
   }
   .el-col img {
     margin: 0 10%;
+    width: 30%;
   }
   .el-button {
     margin: 80px auto;

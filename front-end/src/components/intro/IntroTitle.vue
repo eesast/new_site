@@ -11,7 +11,7 @@ export default {
   props: {
     iTitle:{
       type:String,
-      default: '苟利国家生死以'
+      default: '示例'
     }
   }
 }
