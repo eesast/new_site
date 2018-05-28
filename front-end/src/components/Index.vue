@@ -2,10 +2,10 @@
   <div class="hello">
     <el-carousel :interval="10000" type="card" height="500px">
       <el-carousel-item id="teamstyle1">
-        <img src="../../static/teamstyle.png" width="75%">
+        <img src="../../static/teamstyle.png">
       </el-carousel-item>
       <el-carousel-item id="teamstyle2">
-        <img src="../../static/teamstyle-2.png" width="100%">
+        <img src="../../static/teamstyle-2.png" width="10%">
       </el-carousel-item>
       <el-carousel-item id="software">
         <img src="../../static/software.png" width="100%">
@@ -159,6 +159,10 @@ i {
   .el-carousel__item#teamstyle1 {
     background-color: #d3dce6;
   }
+  .el-carousel__item#teamstyle1 img{
+    width: 70%;
+  }
+
 .box-card {
   width: 80%;
   margin: 15px auto;

@@ -10,7 +10,7 @@
   text-color="#fff"
   active-text-color="#ffd04b">
   <div class="top">
-    <img src="..\..\static\EESAST2017_mini.jpg">
+    <img src="..\..\static\eesast.png">
     <div id="title">
       <h2>清华大学电子工程系学生科协</h2>
       <h3>Student Association of Science and Technology</h3>
