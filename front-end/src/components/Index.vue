@@ -2,7 +2,7 @@
   <div class="hello">
     <el-carousel :interval="10000" type="card" height="500px">
       <el-carousel-item id="teamstyle1">
-        <img src="../../static/teamstyle.png">
+        <img src="../../static/teamstyle19.jpg">
       </el-carousel-item>
       <el-carousel-item id="teamstyle2">
         <img src="../../static/teamstyle-2.png">
@@ -158,12 +158,13 @@ i {
     line-height: 200px;
     margin: 0;
   }
-  
-  .el-carousel__item#teamstyle1 {
-    background-color: #d3dce6;
+
+  .el-carousel__item#teamstyle1{
+    padding-top: 10px;
   }
-  .el-carousel__item#teamstyle1 img{
-    width: 70%;
+
+  .el-carousel__item img{
+    margin: auto 0;
   }
 
 .box-card {
@@ -212,7 +213,4 @@ i {
     background-color: #f9fafc;
   }
 
-a {
-  color: #42b983;
-}
 </style>
