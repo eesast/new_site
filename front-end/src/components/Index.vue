@@ -5,10 +5,13 @@
         <img src="../../static/teamstyle.png">
       </el-carousel-item>
       <el-carousel-item id="teamstyle2">
-        <img src="../../static/teamstyle-2.png" width="10%">
+        <img src="../../static/teamstyle-2.png">
       </el-carousel-item>
       <el-carousel-item id="software">
-        <img src="../../static/software.png" width="100%">
+        <img src="../../static/software.png">
+      </el-carousel-item>
+      <el-carousel-item id="edc">
+        <img src="../../static/edc.jpg">
       </el-carousel-item>
     </el-carousel>
     <el-container>
