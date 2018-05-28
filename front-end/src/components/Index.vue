@@ -1,13 +1,13 @@
 <template>
   <div class="hello">
     <el-carousel :interval="10000" type="card" height="500px">
-      <el-carousel-item>
+      <el-carousel-item id="teamstyle1">
         <img src="../../static/teamstyle.png" width="75%">
       </el-carousel-item>
-      <el-carousel-item>
+      <el-carousel-item id="teamstyle2">
         <img src="../../static/teamstyle-2.png" width="100%">
       </el-carousel-item>
-      <el-carousel-item>
+      <el-carousel-item id="software">
         <img src="../../static/software.png" width="100%">
       </el-carousel-item>
     </el-carousel>
@@ -135,7 +135,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import url("//unpkg.com/element-ui@2.3.4/lib/theme-chalk/index.css");
+/*@import url("//unpkg.com/element-ui@2.3.4/lib/theme-chalk/index.css");*/
 
 h1, h2 {
   font-weight: normal;
@@ -156,12 +156,12 @@ i {
     margin: 0;
   }
   
-  .el-carousel__item:nth-child(2n+1) {
+  .el-carousel__item#teamstyle1 {
     background-color: #d3dce6;
   }
 .box-card {
   width: 80%;
-  margin: 6px auto;
+  margin: 15px auto;
 }
 
 .box-card:hover{

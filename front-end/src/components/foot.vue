@@ -36,7 +36,8 @@ export default {
 
 </script>
 
-<style scoped>.footer {
+<style scoped>
+.footer {
   width: 100%;
   height: 150px;
   display: flex;
@@ -62,6 +63,10 @@ export default {
 }
 .contact_container a{
   font-size: 20px;
+}
+.contact_container img{
+
+  margin: 0;
 }
 .contact a {
   text-decoration: none;
