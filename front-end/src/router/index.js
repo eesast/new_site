@@ -9,6 +9,7 @@ import hdc from '@/components/intro/hdc'
 import edc from '@/components/intro/edc'
 import cc from '@/components/intro/cc'
 import sp from '@/components/intro/sp'
+import sdc from '@/components/intro/sdc'
 
 
 Vue.use(Router)
@@ -53,6 +54,10 @@ export default new Router({
     {
       path: '/intro/sp',
       component: sp
+    },
+    {
+      path: '/intro/sdc',
+      component: sdc
     }
   ]
 })
