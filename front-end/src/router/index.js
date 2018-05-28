@@ -2,13 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/Index'
 import Register from '@/components/register'
-import intro from '@/components/IntroTitle'
-import ADI from '@/components/ADI'
-import ts from '@/components/ts'
-import hdc from '@/components/hdc'
-import edc from '@/components/edc'
-import cc from '@/components/cc'
-import sp from '@/components/sp'
+import intro from '@/components/intro/IntroTitle'
+import ADI from '@/components/intro/ADI'
+import ts from '@/components/intro/ts'
+import hdc from '@/components/intro/hdc'
+import edc from '@/components/intro/edc'
+import cc from '@/components/intro/cc'
+import sp from '@/components/intro/sp'
+
 
 Vue.use(Router)
 

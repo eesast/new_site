@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import '../../static/css/article.css';
+import '../../../static/css/article.css';
 import IntroTitle from './IntroTitle';
 export default {
   name: 'sp',
