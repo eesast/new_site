@@ -164,6 +164,9 @@ i {
   margin: 15px auto;
 }
 
+.box-card div{
+  text-align: center;
+}
 .box-card:hover{
   opacity: 0.7;
   cursor: pointer;
