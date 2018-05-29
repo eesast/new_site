@@ -1,86 +1,100 @@
 <template>
   <div>
 
-    <el-menu
-  :default-active="activeIndex2"
-  class="el-menu-demo"
-  mode="horizontal"
-  @select="handleSelect"
-  background-color="#545c64"
-  text-color="#fff"
-  active-text-color="#ffd04b"
-  router>
-  <div class="top">
-    <img src="..\..\static\eesast.png">
-    <div id="title">
-      <h2>清华大学电子工程系学生科协</h2>
-      <h3>Student Association of Science and Technology</h3>
-    </div>
-    
-  </div>
-  <el-menu-item index="1" route="/">首页</el-menu-item>
-  <el-submenu index="2" route="/">
-    <template slot="title" route="">部门</template>
-    <el-menu-item index="2-1" route="/">学培部</el-menu-item>
-    <el-menu-item index="2-2" route="/">软件部</el-menu-item>
-    <el-menu-item index="2-3" route="/">硬件部</el-menu-item>
-    <el-menu-item index="2-4" route="/">项目部</el-menu-item>
-    <el-menu-item index="2-5" route="/">宣策部</el-menu-item>
-    <!--el-submenu index="2-4">
+    <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#333" text-color="#fff" active-text-color="fff" router>
+      <!--div class="top">
+        <div id="title">
+          <h2>清华大学电子工程系学生科协</h2>
+          <h3>Student Association of Science and Technology</h3>
+        </div>
+      </div-->
+      <el-menu-item index="0" id='img-submenu' route="/">
+        <img class="eesast" src="..\..\static\eesast.png"/>
+      </el-menu-item>
+      <el-menu-item index="1" route="/">首页</el-menu-item>
+      <el-submenu index="2" route="/" class="popup">
+        <template slot="title" route="">部门</template>
+        <el-menu-item index="2-1" route="/">学培部</el-menu-item>
+        <el-menu-item index="2-2" route="/">软件部</el-menu-item>
+        <el-menu-item index="2-3" route="/">硬件部</el-menu-item>
+        <el-menu-item index="2-4" route="/">项目部</el-menu-item>
+        <el-menu-item index="2-5" route="/">宣策部</el-menu-item>
+        <!--el-submenu index="2-4">
       <template slot="title">选项4</template>
       <el-menu-item index="2-4-1">选项1</el-menu-item>
       <el-menu-item index="2-4-2">选项2</el-menu-item>
       <el-menu-item index="2-4-3">选项3</el-menu-item>
     </el-submenu-->
-  </el-submenu>
-  <el-submenu index="3">
-    <template slot="title" route="/intro">赛事</template>
-    <el-menu-item index="3-1" route="/intro/ts">队式设计大赛</el-menu-item>
-    <el-menu-item index="3-2" route="/intro/edc">电子设计大赛</el-menu-item>
-    <el-menu-item index="3-3" route="/intro/hdc">硬件设计大赛</el-menu-item>
-    <el-menu-item index="3-4" route="/intro/cc">挑战杯</el-menu-item>
-    <el-menu-item index="3-5" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>
-  </el-submenu>
-  <el-menu-item index="4" route="/">SAST-Weekly</el-menu-item>
-  <!--el-menu-item index="5">注册</el-menu-item!-->
-  <!--el-menu-item index="6">登录</el-menu-item!-->
-  </el-menu>
+      </el-submenu>
+      <el-submenu index="3">
+        <template slot="title" route="/intro" id="popup">赛事</template>
+        <el-menu-item index="3-1" route="/intro/ts">队式设计大赛</el-menu-item>
+        <el-menu-item index="3-2" route="/intro/edc">电子设计大赛</el-menu-item>
+        <el-menu-item index="3-3" route="/intro/hdc">硬件设计大赛</el-menu-item>
+        <el-menu-item index="3-4" route="/intro/cc">挑战杯</el-menu-item>
+        <el-menu-item index="3-5" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>
+        <el-menu-item index="3-6" route="/intro/sdc">队式软件设计大赛</el-menu-item>
+      </el-submenu>
+      <!--el-menu-item index="4" route="/">SAST-Weekly</el-menu-item-->
+      <!--el-menu-item index="5">注册</el-menu-item!-->
+      <!--el-menu-item index="6">登录</el-menu-item!-->
+    </el-menu>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'navbar',
+    name: "navbar",
     data() {
-      return {
-        activeIndex: '1',
-        activeIndex2: '1',
-      };
+        return {
+            activeIndex: "1",
+            activeIndex2: "1"
+        };
     },
     methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      }
+        handleSelect(key, keyPath) {
+            console.log(key, keyPath);
+        }
     }
-  }
+};
 </script>
 
 <style scoped>
 .top {
     display: flex;
 }
-.top img{
-  width: 5%;
-  height: 5%;
+.eesast{
+  height: 40px;
+  width: 40px;
+  margin: 10px 60px;
+}
+#img-submenu{
+  border: none;
+  cursor: default;
+}
+ul, li {
+  border: none;
+  color: #fff;
+}
+.popup {
+  padding: 0;
   margin: 0;
 }
-div#title{
-  text-align: left;
-  padding-left: 1%;
+/*.el-menu--horizontal {
+  height: 60px;
 }
-#title h2,#title h3{
-  margin: 1% 0;
-  color: white;
+.top img {
+    width: 5%;
+    height: 5%;
+    margin: 0;
 }
-
+div#title {
+    text-align: left;
+    padding-left: 1%;
+}
+#title h2,
+#title h3 {
+    margin: 1% 0;
+    color: white;
+}*/
 </style>
