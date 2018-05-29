@@ -8,7 +8,8 @@
   @select="handleSelect"
   background-color="#545c64"
   text-color="#fff"
-  active-text-color="#ffd04b">
+  active-text-color="#ffd04b"
+  router>
   <div class="top">
     <img src="..\..\static\eesast.png">
     <div id="title">
@@ -17,14 +18,14 @@
     </div>
     
   </div>
-  <el-menu-item index="1" route="">首页</el-menu-item>
-  <el-submenu index="2" route="">
+  <el-menu-item index="1" route="/">首页</el-menu-item>
+  <el-submenu index="2" route="/">
     <template slot="title" route="">部门</template>
-    <el-menu-item index="2-1" route="">学培部</el-menu-item>
-    <el-menu-item index="2-2" route="">软件部</el-menu-item>
-    <el-menu-item index="2-3" route="">硬件部</el-menu-item>
-    <el-menu-item index="2-4" route="">项目部</el-menu-item>
-    <el-menu-item index="2-5" route="">宣策部</el-menu-item>
+    <el-menu-item index="2-1" route="/">学培部</el-menu-item>
+    <el-menu-item index="2-2" route="/">软件部</el-menu-item>
+    <el-menu-item index="2-3" route="/">硬件部</el-menu-item>
+    <el-menu-item index="2-4" route="/">项目部</el-menu-item>
+    <el-menu-item index="2-5" route="/">宣策部</el-menu-item>
     <!--el-submenu index="2-4">
       <template slot="title">选项4</template>
       <el-menu-item index="2-4-1">选项1</el-menu-item>
@@ -33,16 +34,16 @@
     </el-submenu-->
   </el-submenu>
   <el-submenu index="3">
-    <template slot="title" route="">赛事</template>
-    <el-menu-item index="3-1" route="">队式设计大赛</el-menu-item>
-    <el-menu-item index="3-2" route="">电子设计大赛</el-menu-item>
-    <el-menu-item index="3-3" route="">硬件设计大赛</el-menu-item>
-    <el-menu-item index="3-4" route="">挑战杯</el-menu-item>
-    <el-menu-item index="3-5" route="">ADI杯新生知识竞赛</el-menu-item>
+    <template slot="title" route="/intro">赛事</template>
+    <el-menu-item index="3-1" route="/intro/ts">队式设计大赛</el-menu-item>
+    <el-menu-item index="3-2" route="/intro/edc">电子设计大赛</el-menu-item>
+    <el-menu-item index="3-3" route="/intro/hdc">硬件设计大赛</el-menu-item>
+    <el-menu-item index="3-4" route="/intro/cc">挑战杯</el-menu-item>
+    <el-menu-item index="3-5" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>
   </el-submenu>
-  <el-menu-item index="4" route="">SAST-Weekly</el-menu-item>
-  <el-menu-item index="5">注册</el-menu-item>
-  <el-menu-item index="6">登录</el-menu-item>
+  <el-menu-item index="4" route="/">SAST-Weekly</el-menu-item>
+  <!--el-menu-item index="5">注册</el-menu-item!-->
+  <!--el-menu-item index="6">登录</el-menu-item!-->
   </el-menu>
   </div>
 </template>
