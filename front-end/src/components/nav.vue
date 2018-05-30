@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#333" text-color="#fff" active-text-color="fff" router>
+    <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#222831" text-color="#00ADB5" active-text-color="fff" router>
       <!--div class="top">
         <div id="title">
           <h2>清华大学电子工程系学生科协</h2>
@@ -12,13 +12,14 @@
         <img class="eesast" src="..\..\static\eesast.png"/>
       </el-menu-item>
       <el-menu-item index="1" route="/">首页</el-menu-item>
-      <el-submenu index="2" route="/" class="popup">
+      <el-menu-item index="2" route="/intro/dep">部门</el-menu-item>
+      <!--el-submenu index="2" route="/" class="popup">
         <template slot="title" route="">部门</template>
         <el-menu-item index="2-1" route="/">学培部</el-menu-item>
         <el-menu-item index="2-2" route="/">软件部</el-menu-item>
         <el-menu-item index="2-3" route="/">硬件部</el-menu-item>
         <el-menu-item index="2-4" route="/">项目部</el-menu-item>
-        <el-menu-item index="2-5" route="/">宣策部</el-menu-item>
+        <el-menu-item-- index="2-5" route="/">宣策部</el-menu-item-->
         <!--el-submenu index="2-4">
       <template slot="title">选项4</template>
       <el-menu-item index="2-4-1">选项1</el-menu-item>
@@ -71,10 +72,11 @@ export default {
 #img-submenu{
   border: none;
   cursor: default;
+  background-color: #222831 !important;
 }
 ul, li {
   border: none;
-  color: #fff;
+  color: #00ADB5 !important;
 }
 .popup {
   padding: 0;
