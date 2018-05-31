@@ -13,20 +13,7 @@
       </el-menu-item>
       <el-menu-item index="1" route="/">首页</el-menu-item>
       <el-menu-item index="2" route="/intro/dep">部门</el-menu-item>
-      <!--el-submenu index="2" route="/" class="popup">
-        <template slot="title" route="">部门</template>
-        <el-menu-item index="2-1" route="/">学培部</el-menu-item>
-        <el-menu-item index="2-2" route="/">软件部</el-menu-item>
-        <el-menu-item index="2-3" route="/">硬件部</el-menu-item>
-        <el-menu-item index="2-4" route="/">项目部</el-menu-item>
-        <el-menu-item-- index="2-5" route="/">宣策部</el-menu-item-->
-        <!--el-submenu index="2-4">
-      <template slot="title">选项4</template>
-      <el-menu-item index="2-4-1">选项1</el-menu-item>
-      <el-menu-item index="2-4-2">选项2</el-menu-item>
-      <el-menu-item index="2-4-3">选项3</el-menu-item>
-    </el-submenu-->
-      </el-submenu>
+      
       <el-submenu index="3">
         <template slot="title" route="/intro" id="popup">赛事</template>
         <el-menu-item index="3-1" route="/intro/ts">队式设计大赛</el-menu-item>
@@ -36,9 +23,7 @@
         <el-menu-item index="3-5" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>
         <el-menu-item index="3-6" route="/intro/sdc">队式软件设计大赛</el-menu-item>
       </el-submenu>
-      <!--el-menu-item index="4" route="/">SAST-Weekly</el-menu-item-->
-      <!--el-menu-item index="5">注册</el-menu-item!-->
-      <!--el-menu-item index="6">登录</el-menu-item!-->
+
     </el-menu>
   </div>
 </template>

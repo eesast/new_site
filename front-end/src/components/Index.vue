@@ -42,54 +42,29 @@
       <el-main>
 
         <el-row>
-          <el-col :span="16">
-            <div class="grid-content light-blue">
-              <div class="theme-disc">
-                <h3>活动</h3>
-                <p>活动</p>
-              </div>
-              <img src="../../static/activity.jpg">
-            </div>
-          </el-col>
-          <el-col :span="8">
-            <div class="grid-content learn">
-              <el-button>了解更多</el-button>
-            </div>
-          </el-col>
+          <img src="../../static/activity.jpg"/>
+          <div class="theme-disc">
+            <h3>活动</h3>
+            <p>活动</p>
+            <el-button>了解更多</el-button>
+          </div>    
         </el-row>
-
+        <hr width="85%"/>
         <el-row>
-          <el-col :span="16">
-            <div class="grid-content light-blue">
-              <div class="theme-disc">
-                <h3>SAST-Weekly</h3>
-                <p>SAST-Weekly</p>
-              </div>
-              <img src="../../static/sast-weekly.jpg">
-            </div>
-          </el-col>
-          <el-col :span="8">
-            <div class="grid-content learn">
-              <el-button>了解更多</el-button>
-            </div>
-          </el-col>
+          <img src="../../static/sast-weekly.jpg"/>
+          <div class="theme-disc">
+            <h3>EESAST-Weekly</h3>
+            <p>EESAST-Weekly</p>
+            <el-button>了解更多</el-button>
+          </div>    
         </el-row>
-
         <el-row>
-          <el-col :span="16">
-            <div class="grid-content light-blue">
-              <div class="theme-disc">
-                <h3>讲座</h3>
-                <p>讲座</p>
-              </div>
-              <img src="../assets/logo.png">
-            </div>
-          </el-col>
-          <el-col :span="8">
-            <div class="grid-content">
-              <el-button>了解更多</el-button>
-            </div>
-          </el-col>
+          <img src="../../static/activity.jpg"/>
+          <div class="theme-disc">
+            <h3>讲座</h3>
+            <p>讲座</p>
+            <el-button>了解更多</el-button>
+          </div>    
         </el-row>
 
       </el-main>
@@ -147,28 +122,32 @@ h1, h2 {
 }
 
 .el-row {
-    margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+}
+
+  .theme-disc{
+    align-items: center;
+    margin: auto;
   }
-  .el-col {
-    border-radius: 4px;
+  .theme-disc h3, .theme-disc p {
+    text-indent: 0;
   }
-  .el-col img {
-    margin: 0 10%;
-    width: 30%;
+  .el-row img {
+    width: 60%;
+    height: 48%;
+    margin: auto;
   }
+
+
   .el-button {
     margin: 80px auto;
   }
-  .light-blue {
-    background: rgb(104,202,255,0.3);
-  }
-  .theme-disc {
-    align-items: center;
-    margin: 0 auto;
-    padding: 0;
-  }
+
+
   .grid-content {
     display:flex;
+    margin: auto;
     border-radius: 4px;
     min-height: 36px;
     align-items: center;
