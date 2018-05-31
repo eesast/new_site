@@ -15,7 +15,7 @@
       </el-carousel-item>
     </el-carousel>
     <el-container>
-      <el-aside width="30%">
+      <el-aside width="25%">
         <h2>我们的部门</h2>
         <el-card class="box-card">
             <img src="../../static/cultivation.png"/>
