@@ -15,7 +15,7 @@
       </el-carousel-item>
     </el-carousel>
     <el-container>
-      <el-aside width="25%">
+      <!--el-aside width="30%">
         <h2>我们的部门</h2>
         <el-card class="box-card">
             <img src="../../static/cultivation.png"/>
@@ -37,7 +37,7 @@
             <img src="../../static/scheme.png"/>
             <p>宣策部</p>
         </el-card>
-      </el-aside>
+      </el-aside-->
 
       <el-main>
 
@@ -46,30 +46,57 @@
           <div class="theme-disc">
             <h3>活动</h3>
             <p>活动</p>
-            <el-button>了解更多</el-button>
+            <el-button><h2>了解更多</h2></el-button>
           </div>    
         </el-row>
-        <hr width="85%"/>
+
         <el-row>
           <img src="../../static/sast-weekly.jpg"/>
           <div class="theme-disc">
             <h3>EESAST-Weekly</h3>
             <p>EESAST-Weekly</p>
-            <el-button>了解更多</el-button>
+            <el-button><h2>了解更多</h2></el-button>
           </div>    
         </el-row>
+
         <el-row>
           <img src="../../static/activity.jpg"/>
           <div class="theme-disc">
             <h3>讲座</h3>
             <p>讲座</p>
-            <el-button>了解更多</el-button>
+            <el-button><h2>了解更多</h2></el-button>
           </div>    
         </el-row>
 
       </el-main>
+
     </el-container>
-  
+    <div id="depart-ctr">
+      <h2>我们的部门</h2>
+      <el-main id="department">
+        
+        <el-card class="box-card">
+            <img src="../../static/cultivation.png"/>
+          <p>学培部</p>
+        </el-card>
+        <el-card class="box-card">
+            <img src="../../static/software.png"/>
+            <p>软件部</p>
+        </el-card>
+        <el-card class="box-card">
+            <img src="../../static/hardware.png"/>
+            <p>硬件部</p>
+        </el-card>
+        <el-card class="box-card">
+            <img src="../../static/project.png"/>
+            <p>项目部</p>
+        </el-card>
+        <el-card class="box-card">
+            <img src="../../static/scheme.png"/>
+            <p>宣策部</p>
+        </el-card>
+      </el-main>
+    </div>
   </div>
 </template>
 
@@ -103,7 +130,7 @@ h1, h2 {
 
 .box-card {
   width: 80%;
-  margin: 12px auto;
+  margin: 12px 10px;
   text-align: center;
 }
 
@@ -121,10 +148,25 @@ h1, h2 {
   cursor: pointer;
 }
 
+.el-main#department {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .el-row {
   align-items: center;
   display: flex;
+  margin: 0.5% 0;
+  padding: 1% 0;
+  border-style: none;
+  border-radius: 10px;
+  
 }
+.el-row img {
+    width: 60%;
+    margin: 0;
+  }
 
   .theme-disc{
     align-items: center;
@@ -133,29 +175,16 @@ h1, h2 {
   .theme-disc h3, .theme-disc p {
     text-indent: 0;
   }
-  .el-row img {
-    width: 60%;
-    height: 48%;
-    margin: auto;
-  }
-
 
   .el-button {
     margin: 80px auto;
-  }
-
-
-  .grid-content {
-    display:flex;
-    margin: auto;
-    border-radius: 4px;
-    min-height: 36px;
-    align-items: center;
   }
 
   .row-bg {
     padding: 10px 0;
     background-color: #f9fafc;
   }
-
+h3{
+  font-size: 4em;
+}
 </style>
