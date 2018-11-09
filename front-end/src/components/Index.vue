@@ -60,7 +60,7 @@
         </el-row>
 
         <el-row>
-          <img src="../../static/activity.jpg"/>
+          <img src="../../static/lecture.jpg"/>
           <div class="theme-disc">
             <h3>讲座</h3>
             <p>讲座</p>
@@ -74,27 +74,37 @@
     <div id="depart-ctr">
       <h2>我们的部门</h2>
       <el-main id="department">
-        
-        <el-card class="box-card">
+        <a class="link-to-department" href="intro/dep#dep study">
+          <el-card class="box-card"> 
             <img src="../../static/cultivation.png"/>
           <p>学培部</p>
-        </el-card>
-        <el-card class="box-card">
+          </el-card>
+        </a>
+        <a class="link-to-department" href="intro/dep#dep software">
+          <el-card class="box-card">
+          
             <img src="../../static/software.png"/>
             <p>软件部</p>
-        </el-card>
-        <el-card class="box-card">
-            <img src="../../static/hardware.png"/>
-            <p>硬件部</p>
-        </el-card>
-        <el-card class="box-card">
+          </el-card>
+        </a>        
+        <a class="link-to-department" href="intro/dep#dep hardware">
+          <el-card class="box-card">
+              <img src="../../static/hardware.png"/>
+            <p>硬件部</p>  
+          </el-card>
+        </a>
+        <a class="link-to-department" href="intro/dep#dep project">
+          <el-card class="box-card">  
             <img src="../../static/project.png"/>
-            <p>项目部</p>
-        </el-card>
-        <el-card class="box-card">
+            <p>项目部</p>   
+          </el-card>
+        </a>
+        <a class="link-to-department" href="intro/dep#dep propagate">
+          <el-card class="box-card">     
             <img src="../../static/scheme.png"/>
-            <p>宣策部</p>
-        </el-card>
+            <p>宣策部</p>   
+          </el-card>
+        </a>
       </el-main>
     </div>
   </div>
@@ -134,6 +144,12 @@ h1, h2 {
   text-align: center;
 }
 
+#department a
+{
+  text-decoration:none;
+  width:100%;
+}
+
 .box-card img{
   width: 10%;
   margin: 0;
@@ -142,6 +158,7 @@ h1, h2 {
 
 .box-card p{
   text-indent: 0;
+  color:black;
 }
 .box-card:hover{
   opacity: 0.7;

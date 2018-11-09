@@ -2,7 +2,7 @@
     <div>
         <h1>部门介绍</h1>
         <div id="wrap">
-            <div class="dep software">
+            <div class="dep software" id="dep software">
                 <div class="article">
                     <p>
                         软件部，致力于提升技术水平，让同学们体会开发的乐趣，是同学们走向编程大佬之路的踏脚石。
@@ -22,7 +22,7 @@
                     <h2>软件部</h2>
                 </div>
             </div>
-            <div class="dep hardware">
+            <div class="dep hardware" id="dep hardware">
                 <div class="article">
                     <p>
                         硬件部，向同学们提供零基础的全面硬件知识培训，为所有同学提供提升和展示自我的舞台，也希望培养靠谱的人才。
@@ -45,7 +45,7 @@
                     <h2>硬件部</h2>
                 </div>
             </div>
-            <div class="dep project">
+            <div class="dep project" id="dep project">
                 <div class="article">
                     <p>
                        项目部致力于引导和帮助电子系的同学在科研，科创方面不断前进，为同学们提供提升自我，交流经验，分享成果的平台。 
@@ -62,7 +62,7 @@
                     <h2>项目部</h2>
                 </div>
             </div>
-            <div class="dep study">
+            <div class="dep study" id="dep study">
                 <div class="article">
                     <p>
                         学培部工作的主要内容，主要是为同学们搭建起通向电子系学术科研的桥梁，让同学们了解电子系实验室的情况，让同学们形成更为清晰的专业认识。
@@ -82,7 +82,7 @@
                     <h2>学培部</h2>
                 </div>
             </div>
-            <div class="dep propagate">
+            <div class="dep propagate" id="dep propagate">
                 <div class="article">
                     <p>
                         宣策部负责统筹规划科协的宣传活动以及辅助大型活动的策划准备，致力于为电子系科协搭建最宽广的宣传平台。
