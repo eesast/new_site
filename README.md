@@ -1,2 +1,2 @@
-# eesast_recruiment
-The static page for recruiment in 2018
+# eesast_newsite
+The static page for eesast
