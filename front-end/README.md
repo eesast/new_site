@@ -1,6 +1,6 @@
 # eesast_static
 
-> A Vue.js project
+> A Vue.js project and
 
 ## Build Setup
 
