@@ -10,7 +10,7 @@ import cc from '@/components/intro/cc'
 import sp from '@/components/intro/sp'
 import sdc from '@/components/intro/sdc'
 import dep from '@/components/intro/dep'
-
+import train from '@/components/intro/train'
 
 Vue.use(Router)
 
@@ -58,6 +58,10 @@ export default new Router({
     {
       path: '/intro/dep',
       component: dep
+    },
+    {
+      path: '/intro/train',
+      component: train
     }
   ]
 })

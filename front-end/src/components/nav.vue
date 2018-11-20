@@ -23,7 +23,7 @@
         <el-menu-item index="3-5" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>
         <el-menu-item index="3-6" route="/intro/sdc">队式软件设计大赛</el-menu-item>
       </el-submenu>
-
+      <el-menu-item index="4" route="/intro/train">培训</el-menu-item>
     </el-menu>
   </div>
 </template>

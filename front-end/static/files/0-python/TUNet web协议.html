@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<br>
+<h1>TUNet web版协议</h1>
+<p>在登录过程中打开浏览器的网络调试页（F12）就可以看到请求的情况。</p>
+<h2 id="登录">登录</h2>
+<p>登录服务器需要用到明文用户名和密码的MD5值，密码的MD5值可以通过下面的方法获取：</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> hashlib
+ret <span class="op">=</span> hashlib.md5(<span class="st">&#39;&lt;your_password&gt;&#39;</span>.encode(<span class="st">&#39;utf-8&#39;</span>)).hexdigest()</code></pre></div>
+<p>POST的内容包括</p>
+<ul>
+<li>action：'login'</li>
+<li>user_name：用户名</li>
+<li>user_password：'{MD5_HEX}' + 密码的MD5值</li>
+<li>ac_id：常量1</li>
+</ul>
+<p>将它们作为POST数据，请求<code>https://net.tsinghua.edu.cn/do_login.php</code>，例如我们声明一个：</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">login_dict <span class="op">=</span> {<span class="st">&#39;action&#39;</span>:<span class="st">&#39;login&#39;</span>, <span class="st">&#39;user_name&#39;</span>:<span class="st">&#39;wqr14&#39;</span>, <span class="st">&#39;user_password&#39;</span>:<span class="st">&#39;</span><span class="sc">{MD5_HEX}</span><span class="st">5f4dcc3b5aa765d61d8327deb882cf99&#39;</span>, <span class="st">&#39;ac_id&#39;</span>:<span class="dv">1</span>}</code></pre></div>
+<p>然后发送该请求：</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> requests
+ret <span class="op">=</span> requests.post(<span class="st">&#39;https://net.tsinghua.edu.cn/do_login.php&#39;</span>, data<span class="op">=</span>login_dict).text</code></pre></div>
+<p>返回’login_ok’说明登录成功</p>
+<h2 id="下线">下线</h2>
+<p>与登录类似，不同的地方是POST的内容</p>
+<ul>
+<li>action：'logout'</li>
+</ul>
+<p>返回’logout_ok’说明下线成功</p>
+<h2 id="查询在线状态">查询在线状态</h2>
+<p>与登录类似，不同的地方是POST的内容</p>
+<ul>
+<li>action：'check_online'</li>
+</ul>
+<p>返回’not_online’说明不在线，返回’online’说明在线</p>
+<p>在线时，我们可以进一步发送GET请求<code>https://net.tsinghua.edu.cn/rad_user_info.php</code>（不需要参数）来获取在线用户信息：</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> requests
+ret <span class="op">=</span> requests.get(<span class="st">&#39;https://net.tsinghua.edu.cn/rad_user_info.php&#39;</span>).text</code></pre></div>
+<p>返回信息的格式是：</p>
+<pre><code>用户名, 登录时间, 服务器时间, 未使用, 未使用, 未使用, 未使用, 未使用, 当前IP, 未使用, 未使用, 帐户余额, 未使用</code></pre>
+<p>登录时间和服务器时间是UNIX timestamp，我们可以将它转换成便于阅读的形式：</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> time
+time_str <span class="op">=</span> time.ctime(unix_timestamp)</code></pre></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+</body>
+</html>
