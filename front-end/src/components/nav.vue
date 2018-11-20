@@ -12,7 +12,7 @@
         <img class="eesast" src="..\..\static\eesast.png"/>
       </el-menu-item>
       <el-menu-item index="1" route="/">首页</el-menu-item>
-      <el-menu-item index="2" route="/intro/dep">部门</el-menu-item>
+      <el-menu-item index="2" route="/intro/dep" @click.native="delstorage()">部门</el-menu-item>
       
       <el-submenu index="3">
         <template slot="title" route="/intro" id="popup">赛事</template>
@@ -40,6 +40,13 @@ export default {
     methods: {
         handleSelect(key, keyPath) {
             console.log(key, keyPath);
+        },
+        delstorage()
+        {
+          // // console.log(selectindex);
+          // let selectedindex=selectindex;
+          // localStorage.setItem('id',selectedindex);
+          localStorage.removeItem("id");
         }
     }
 };
