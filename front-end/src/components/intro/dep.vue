@@ -105,6 +105,23 @@
 <script>
 export default {
     name: "dep",
+    mounted:function()
+    {
+        this.getlocal();
+    },
+    methods:
+    {
+        getlocal: function()
+        {
+            let select=localStorage.getItem('id');
+            // console.log(select);
+            let anchorElement=document.getElementById(select);
+            if(select)
+            {
+                anchorElement.scrollIntoView();
+            }
+        }
+    }
 }
 </script>
 <style lang="scss">

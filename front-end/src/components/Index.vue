@@ -74,37 +74,37 @@
     <div id="depart-ctr">
       <h2>我们的部门</h2>
       <el-main id="department">
-        <a class="link-to-department" href="intro/dep#dep study">
+        <router-link to="intro/dep" class="link-to-study" @click.native="selectnav('dep study')">
           <el-card class="box-card"> 
             <img src="../../static/cultivation.png"/>
           <p>学培部</p>
           </el-card>
-        </a>
-        <a class="link-to-department" href="intro/dep#dep software">
+        </router-link>
+        <router-link to="intro/dep" class="link-to-software" @click.native="selectnav('dep software')">
           <el-card class="box-card">
           
             <img src="../../static/software.png"/>
             <p>软件部</p>
           </el-card>
-        </a>        
-        <a class="link-to-department" href="intro/dep#dep hardware">
+        </router-link>   
+        <router-link to="intro/dep" class="link-to-hardware" @click.native="selectnav('dep hardware')">
           <el-card class="box-card">
               <img src="../../static/hardware.png"/>
             <p>硬件部</p>  
           </el-card>
-        </a>
-        <a class="link-to-department" href="intro/dep#dep project">
+        </router-link>
+        <router-link to="intro/dep" class="link-to-project" @click.native="selectnav('dep project')">
           <el-card class="box-card">  
             <img src="../../static/project.png"/>
             <p>项目部</p>   
           </el-card>
-        </a>
-        <a class="link-to-department" href="intro/dep#dep propagate">
+        </router-link>
+        <router-link to="intro/dep" class="link-to-department" @click.native="selectnav('dep propagate')">
           <el-card class="box-card">     
             <img src="../../static/scheme.png"/>
             <p>宣策部</p>   
           </el-card>
-        </a>
+        </router-link>
       </el-main>
     </div>
   </div>
@@ -117,8 +117,19 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods:
+  {
+    selectnav(selectindex)
+    {
+      // console.log(selectindex);
+      let selectedindex=selectindex;
+      localStorage.setItem('id',selectedindex);
+    }
   }
+ 
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
