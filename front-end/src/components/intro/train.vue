@@ -9,9 +9,26 @@
                     <span>0-python</span>
                     <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
                 </div>
-                <div v-for="o in message" :key="o" class="text item">
-                    <div v-html="'<li>'+o.mmd+'</li>'"></div>
-                </div>
+                
+                <el-table
+                :data="tableData"
+                style="width: 100%">
+                <!-- <div v-html="'<li>'+o.mmd+'</li>'"></div> -->
+                <el-table-column
+                    prop="name"
+                    label="名称"
+                    width="700">
+                </el-table-column>
+                <el-table-column
+                    prop="download"
+                    label="下载地址"
+                    width="200">
+                    <template slot-scope="scope">
+                    <div v-html="scope.row.download"></div>
+                    </template>
+                </el-table-column>
+                </el-table>
+                
                 </el-card>
             </el-tab-pane>
             <el-tab-pane label="1-linux" name="second" id='card2'>1-linux</el-tab-pane>
@@ -30,12 +47,15 @@ export default {
      data() {
       return {
         activeName: 'first',
-        message:[
+        tableData:[
             {
-                mmd:"<a href='/static/files/0-python/author.txt' download='author.txt'>author.txt</a>"
+                name:'author.txt',
+                download:"<a href='/static/files/0-python/author.txt' download='author.txt'>立即下载</a>"
+                
             },
             {
-                mmd:"<a href='/static/files/0-python/python0.pdf' download='python0.pdf'>python0.pdf</a>"
+                name:'python0.pdf',
+                download:"<a href='/static/files/0-python/python0.pdf' download='python0.pdf'>立即下载</a>"
             }
         ]
       };
@@ -44,9 +64,19 @@ export default {
     //   handleClick(tab, event) {
     //     // console.log(tab, event);
     //   }
+       
     }
 }
-
+ function getFiles(folder){
+        const testFolder = folder;
+        const fs = require('fs');
+        fs.readdir(testFolder, (err, files) => {
+            files.forEach(file => {
+            console.log(file);
+            });
+        });
+        }
+getFiles("/static/files/0-pytho/");
 
 </script>
 <style lang="scss">
