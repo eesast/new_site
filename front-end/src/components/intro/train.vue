@@ -2,18 +2,18 @@
     <div>
         <h1>培训资料</h1>
         <div id="wrap">
-            <el-tabs id="train-card" tab-position="left" v-model="activeName" @tab-click="handleClick">
-            <el-tab-pane label="0-python" name="first" id='card1'>
+            <el-tabs id="train-card" tab-position="left" v-model="activeName" @tab-click="handleClick"> 
+    
+           <el-tab-pane v-for='x in dirs' :label='x.name' :name="x.id" id='card1'>
                 <el-card class="box-card">
                 <div slot="header" class="clearfix">
-                    <span>0-python</span>
-                    <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
-                </div>
+                    <span>{{x.name}}</span>
+                     </div>
                 
                 <el-table
-                :data="tableData"
+                :data="x.tableData"
                 style="width: 100%">
-                <!-- <div v-html="'<li>'+o.mmd+'</li>'"></div> -->
+               
                 <el-table-column
                     prop="name"
                     label="名称"
@@ -30,13 +30,41 @@
                 </el-table>
                 
                 </el-card>
-            </el-tab-pane>
-            <el-tab-pane label="1-linux" name="second" id='card2'>1-linux</el-tab-pane>
+           </el-tab-pane>
+    
+            <!-- <el-tab-pane label="0-python" name="first" id='card1'>
+                <el-card class="box-card">
+                <div slot="header" class="clearfix">
+                    <span>0-python</span>
+                     </div>
+                
+                <el-table
+                :data="tableData"
+                style="width: 100%">
+               
+                <el-table-column
+                    prop="name"
+                    label="名称"
+                    width="700">
+                </el-table-column>
+                <el-table-column
+                    prop="download"
+                    label="下载地址"
+                    width="200">
+                    <template slot-scope="scope">
+                    <div v-html="scope.row.download"></div>
+                    </template>
+                </el-table-column>
+                </el-table>
+                
+                </el-card>
+            </el-tab-pane>  -->
+            <!-- <el-tab-pane label="1-linux" name="second" id='card2'>1-linux</el-tab-pane>
             <el-tab-pane label="2-djangp" name="third" id='card3'>2-djangp</el-tab-pane>
             <el-tab-pane label="3-html" name="fourth" id='card4'>3-html</el-tab-pane>
             <el-tab-pane label="4-Communication&Testing" name="fifth" id='card5'>4-Communication&Testing</el-tab-pane>
             <el-tab-pane label="5-git" name="sixth" id='card6'>5-git</el-tab-pane>
-            <el-tab-pane label="7-C#&Unity" name="seventh" id='card7'>7-C#&Unity</el-tab-pane>
+            <el-tab-pane label="7-C#&Unity" name="seventh" id='card7'>7-C#&Unity</el-tab-pane> -->
             </el-tabs>
         </div>
     </div>
@@ -45,19 +73,52 @@
 export default {
     name: "train",
      data() {
-      return {
-        activeName: 'first',
-        tableData:[
+         var dirs;
+         fetch("https://future.eesast.com/backend/lecture/dir",
+         {
+            method:'GET',
+            headers:
             {
-                name:'author.txt',
-                download:"<a href='/static/files/0-python/author.txt' download='author.txt'>立即下载</a>"
-                
-            },
-            {
-                name:'python0.pdf',
-                download:"<a href='/static/files/0-python/python0.pdf' download='python0.pdf'>立即下载</a>"
+                'Content-Type':'application/json',
+               
             }
-        ]
+
+         }).then(response=>{
+             if(response.ok)
+             {
+                 return response.json();
+             }
+         }).then(res=>
+         {
+             console.log(res);
+             dirs=res;
+         })
+        //  var dirs=[{name:'0-python',tableData:[
+        //     {
+        //         name:'author.txt',
+        //         download:"<a href='/static/files/0-python/author.txt' download='author.txt'>立即下载</a>"
+                
+        //     },
+        //     {
+        //         name:'python0.pdf',
+        //         download:"<a href='/static/files/0-python/python0.pdf' download='python0.pdf'>立即下载</a>"
+        //     }
+        // ],},{name:'1-linux',tableData:[
+        //     {
+        //         name:'author1.txt',
+        //         download:"<a href='/static/files/0-python/author.txt' download='author.txt'>立即下载</a>"
+                
+        //     },
+        //     {
+        //         name:'python1.pdf',
+        //         download:"<a href='/static/files/0-python/python0.pdf' download='python0.pdf'>立即下载</a>"
+        //     }
+        // ],}];
+         for(var i=0;i<dirs.length;i++)dirs[i]['id']=i;
+        return {
+        activeName: '0',
+        
+        dirs:dirs
       };
     },
     methods: {
@@ -76,7 +137,7 @@ export default {
             });
         });
         }
-getFiles("/static/files/0-pytho/");
+// getFiles("/static/files/0-pytho/");
 
 </script>
 <style lang="scss">
