@@ -25,7 +25,7 @@ SECRET_KEY = 'igdu+=yxg!_nl*%n((*2b__#lp=y!qam-ur!+$l2_bvt9$0l)o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
