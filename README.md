@@ -8,6 +8,7 @@ The static page for eesast
 * Back-end: A django project to provide indexes 
   * Index of **LECTURE_DIR** at **backend/lecture/dir/**  
   * Index of **LECTURE_DIR/subdir** at  **backend/lecture/subdir/\<str:subdir\>** 
+  * **LECTURE_DIR** can be modified at **./lecture/views.py** , where **./** refers to the directory **manage.py** locates in.
 * Test at local enviroment:
   * Run    **python manage.py runserver 127.0.0.1:8888**  at **./** (the directory where this README file locates)   
   * Get data from     **127.0.0.1:8888/backend/lecture/dir/**  or  **127.0.0.1:8888/backend/lecture/subdir/name-of-subdir** 
