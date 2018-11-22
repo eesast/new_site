@@ -12,5 +12,5 @@ The static page for eesast
   * Run    **python manage.py runserver 127.0.0.1:8888**  at **./** (the directory where this README file locates)   
   * Get data from     **127.0.0.1:8888/backend/lecture/dir/**  or  **127.0.0.1:8888/backend/lecture/subdir/name-of-subdir** 
     * You can try this by GET from 127.0.0.1:8888/backend/lecture/dir/ in your Postman and you will know how this works
-  * Usually, the **name-of-subdir** will be responsed in response of **backend/lecture/dir/ ** 
+  * Usually, the **name-of-subdir** will be responsed in response of **backend/lecture/dir/** 
 
