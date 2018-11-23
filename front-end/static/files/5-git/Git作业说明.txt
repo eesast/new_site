@@ -1,2 +1,0 @@
-Git作业在https://github.com/EESAST里的一个名字git-homework的仓库里，请大家根据README.md中的要求完全练习。
-其中队式开发组的同学请务必完成这个练习，其余的同学可根据自己的兴趣选择是否做这个练习

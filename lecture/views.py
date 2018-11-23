@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from os import listdir,path
 
 # Create your views here.
-LECTURE_DIR = '../files/'
+LECTURE_DIR = '../files'
 
 def directory(request):
 	return JsonResponse({'dir':listdir(LECTURE_DIR)})

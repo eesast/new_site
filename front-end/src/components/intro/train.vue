@@ -3,15 +3,15 @@
         <h1>培训资料</h1>
         <div id="wrap">
             <el-tabs id="train-card" tab-position="left" v-model="activeName" @tab-click="handleClick"> 
-    
-           <el-tab-pane v-for='x in dirs' :label='x.name' :name="x.id" id='card1'>
-                <el-card class="box-card">
+            <template v-if="dirs">
+           <el-tab-pane  v-for='(dir,index) in dirs' :label='dir' :name="index" id='card1'>
+                <el-card v-if="subdirs[index]" class="box-card">
                 <div slot="header" class="clearfix">
-                    <span>{{x.name}}</span>
+                    <span>{{dir}}</span>
                      </div>
                 
                 <el-table
-                :data="x.tableData"
+                :data="subdirs[index]"
                 style="width: 100%">
                
                 <el-table-column
@@ -31,7 +31,7 @@
                 
                 </el-card>
            </el-tab-pane>
-    
+            </template>
             <!-- <el-tab-pane label="0-python" name="first" id='card1'>
                 <el-card class="box-card">
                 <div slot="header" class="clearfix">
@@ -72,17 +72,16 @@
 <script>
 export default {
     name: "train",
-     data() {
-         var dirs;
-         fetch("https://future.eesast.com/backend/lecture/dir",
+    created()
+    {
+        // console.log(x);
+        fetch("http://127.0.0.1:8888/backend/lecture/dir/",
          {
             method:'GET',
             headers:
             {
                 'Content-Type':'application/json',
-               
             }
-
          }).then(response=>{
              if(response.ok)
              {
@@ -90,54 +89,76 @@ export default {
              }
          }).then(res=>
          {
-             console.log(res);
-             dirs=res;
+             this.dirs=res.dir;
+             for(var i=0;i<res.dir.length;i++)
+             {
+                 this.GETSUB(i);
+             }
          })
+    },
+     data() {
+         
+         
         //  var dirs=[{name:'0-python',tableData:[
         //     {
         //         name:'author.txt',
         //         download:"<a href='/static/files/0-python/author.txt' download='author.txt'>立即下载</a>"
                 
         //     },
-        //     {
-        //         name:'python0.pdf',
-        //         download:"<a href='/static/files/0-python/python0.pdf' download='python0.pdf'>立即下载</a>"
-        //     }
-        // ],},{name:'1-linux',tableData:[
-        //     {
-        //         name:'author1.txt',
-        //         download:"<a href='/static/files/0-python/author.txt' download='author.txt'>立即下载</a>"
-                
-        //     },
-        //     {
-        //         name:'python1.pdf',
-        //         download:"<a href='/static/files/0-python/python0.pdf' download='python0.pdf'>立即下载</a>"
-        //     }
-        // ],}];
-         for(var i=0;i<dirs.length;i++)dirs[i]['id']=i;
+
         return {
         activeName: '0',
-        
-        dirs:dirs
+        dirs:new Array(),
+        subdirs:new Array(),
       };
     },
     methods: {
-    //   handleClick(tab, event) {
-    //     // console.log(tab, event);
-    //   }
-       
+      handleClick(tab, event) {
+        // console.log(tab, event);
+      },
+        GETSUB(i)
+{
+    fetch("http://127.0.0.1:8888/backend/lecture/subdir/"+this.dirs[i],
+    {
+        method:'GET',
+        headers:
+        {
+            'Content-Type':'application/json',
+        }
+    }).then(respo=>
+    {
+        if(respo.ok)
+        {
+            return respo.json();
+        }
+    }).then(resp=>
+    {
+        this.subdirs[i]=new Array(); 
+        for(var j=0;j<resp.dir.length;j++)
+        {
+            // this.subdirs[i][j]=new Object();
+            var x=new Object();
+            x.name=resp.dir[j];;
+            x.download="<a href='/static/files/"+this.dirs[i]+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
+            this.subdirs[i].push(x);
+            console.log(this.subdirs[i][j]);
+            // this.subdirs[i][j].name=resp.dir[j];
+            // this.subdirs[i][j].download="<a href='/static/files/"+this.dirs[i]+"/"+this.subdirs[i][j].name+"' download='"+this.subdirs[i][j].name+"'>立即下载</a>"
+        }
+        
+    }).then(()=>
+             {
+            //      for(var i=0;i<this.subdirs.length;i++)
+            //  {
+            //      console.log(this.subdirs);
+            //  }
+            // Vue.set(this.subdirs[0][0],'ok',1);
+            // console.log(this.subdirs[6]);
+             }
+         )
+}
     }
 }
- function getFiles(folder){
-        const testFolder = folder;
-        const fs = require('fs');
-        fs.readdir(testFolder, (err, files) => {
-            files.forEach(file => {
-            console.log(file);
-            });
-        });
-        }
-// getFiles("/static/files/0-pytho/");
 
 </script>
 <style lang="scss">
