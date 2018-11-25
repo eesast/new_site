@@ -8,20 +8,21 @@
           <h3>Student Association of Science and Technology</h3>
         </div>
       </div-->
-      <el-menu-item index="0" id='img-submenu' route="/">
+      <el-menu-item index="0" route="https://www.eesast.com/">EESAST</el-menu-item>
+      <el-menu-item index="1" id='img-submenu' route="/">
         <img class="eesast" src="..\..\static\eesast.png"/>
       </el-menu-item>
-      <el-menu-item index="1" route="/">首页</el-menu-item>
-      <el-menu-item index="2" route="/intro/dep" @click.native="delstorage()">部门</el-menu-item>
+      <el-menu-item index="2" route="/">首页</el-menu-item>
+      <el-menu-item index="3" route="/intro/dep" @click.native="delstorage()">部门</el-menu-item>
       
-      <el-submenu index="3">
+      <el-submenu index="4">
         <template slot="title" route="/intro" id="popup">赛事</template>
-        <el-menu-item index="3-1" route="/intro/ts">队式设计大赛</el-menu-item>
-        <el-menu-item index="3-2" route="/intro/edc">电子设计大赛</el-menu-item>
-        <el-menu-item index="3-3" route="/intro/hdc">硬件设计大赛</el-menu-item>
-        <el-menu-item index="3-4" route="/intro/cc">挑战杯</el-menu-item>
-        <el-menu-item index="3-5" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>
-        <el-menu-item index="3-6" route="/intro/sdc">队式软件设计大赛</el-menu-item>
+        <el-menu-item index="4-1" route="/intro/ts">队式设计大赛</el-menu-item>
+        <el-menu-item index="4-2" route="/intro/edc">电子设计大赛</el-menu-item>
+        <el-menu-item index="4-3" route="/intro/hdc">硬件设计大赛</el-menu-item>
+        <el-menu-item index="4-4" route="/intro/cc">挑战杯</el-menu-item>
+        <el-menu-item index="4-5" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>
+        <el-menu-item index="4-6" route="/intro/sdc">队式软件设计大赛</el-menu-item>
       </el-submenu>
 
     </el-menu>
