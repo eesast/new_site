@@ -1,8 +1,8 @@
 <template>
   <div>
 
-    <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#222831" text-color="#00ADB5" active-text-color="fff" router>
-      <!--div class="top">
+    <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#222831" text-color="#00ADB5" active-text-color="#00ADB5" router>
+      <!--zdiv class="top">
         <div id="title">
           <h2>清华大学电子工程系学生科协</h2>
           <h3>Student Association of Science and Technology</h3>
@@ -24,7 +24,7 @@
         <el-menu-item index="4-5" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>
         <el-menu-item index="4-6" route="/intro/sdc">队式软件设计大赛</el-menu-item>
       </el-submenu>
-
+      <el-menu-item index="4" route="/intro/train">培训</el-menu-item>
     </el-menu>
   </div>
 </template>
@@ -68,6 +68,11 @@ export default {
   background-color: #222831 !important;
 }
 ul, li {
+  border: none;
+  color: #00ADB5 !important;
+}
+.el-submenu__title
+{
   border: none;
   color: #00ADB5 !important;
 }
