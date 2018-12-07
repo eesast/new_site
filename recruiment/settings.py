@@ -53,7 +53,7 @@ MIDDLEWARE = [
 # 'corsheaders.middleware.CorsMiddleware',
 #     'django.middleware.common.CommonMiddleware', # 注意顺序
 ]
-# #跨域增加忽略
+# # #跨域增加忽略
 # CORS_ALLOW_CREDENTIALS = True
 # CORS_ORIGIN_ALLOW_ALL = True
 # CORS_ORIGIN_WHITELIST = (

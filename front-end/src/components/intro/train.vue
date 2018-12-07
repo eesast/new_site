@@ -3,35 +3,35 @@
         <h1>培训资料</h1>
         <div id="wrap">
             <el-tabs id="train-card" tab-position="left" v-model="activeName" @tab-click="handleClick"> 
-            <template v-if="dirs">
-           <el-tab-pane  v-for='(dir,index) in dirs' :label='dir' :name="index" id='card1'>
-                <el-card v-if="subdirs[index]" class="box-card">
-                <div slot="header" class="clearfix">
-                    <span>{{dir}}</span>
+            <!-- <template v-if="dirs"> -->
+            <el-tab-pane  v-for='(dir,index) in dirs' :label='dir.name' :name="index" id='card1'>
+                <el-card  class="box-card">
+                    <div slot="header" class="clearfix">
+                    <span>{{dir.name}}</span>
                      </div>
                 
-                <el-table
-                :data="subdirs[index]"
-                style="width: 100%">
-               
-                <el-table-column
-                    prop="name"
-                    label="名称"
-                    width="700">
-                </el-table-column>
-                <el-table-column
-                    prop="download"
-                    label="下载地址"
-                    width="200">
-                    <template slot-scope="scope">
-                    <div v-html="scope.row.download"></div>
-                    </template>
-                </el-table-column>
-                </el-table>
+                    <el-table
+                    :data="dir.subdirs"
+                    style="width: 100%">
+                
+                    <el-table-column
+                        prop="name"
+                        label="名称"
+                        width="700">
+                    </el-table-column>
+                    <el-table-column
+                        prop="download"
+                        label="下载地址"
+                        width="200">
+                        <template slot-scope="scope">
+                        <div v-html="scope.row.download"></div>
+                        </template>
+                    </el-table-column>
+                    </el-table>
                 
                 </el-card>
            </el-tab-pane>
-            </template>
+            <!-- </template> -->
             <!-- <el-tab-pane label="0-python" name="first" id='card1'>
                 <el-card class="box-card">
                 <div slot="header" class="clearfix">
@@ -89,9 +89,12 @@ export default {
              }
          }).then(res=>
          {
-             this.dirs=res.dir;
+             
              for(var i=0;i<res.dir.length;i++)
              {
+                 this.dirs[i]=new Object();
+                //  this.$set(this.dirs,i,{name:res.dir[i]});
+                 this.dirs[i].name=res.dir[i];
                  this.GETSUB(i);
              }
          })
@@ -109,7 +112,7 @@ export default {
         return {
         activeName: '0',
         dirs:new Array(),
-        subdirs:new Array(),
+        // subdirs:new Array(),
       };
     },
     methods: {
@@ -118,7 +121,7 @@ export default {
       },
         GETSUB(i)
 {
-    fetch("http://127.0.0.1:8888/backend/lecture/subdir/"+this.dirs[i],
+    fetch("http://127.0.0.1:8888/backend/lecture/subdir/"+this.dirs[i].name,
     {
         method:'GET',
         headers:
@@ -133,18 +136,26 @@ export default {
         }
     }).then(resp=>
     {
-        this.subdirs[i]=new Array(); 
+        this.dirs[i].subdirs=new Array(); 
         for(var j=0;j<resp.dir.length;j++)
         {
             // this.subdirs[i][j]=new Object();
             var x=new Object();
             x.name=resp.dir[j];;
-            x.download="<a href='/static/files/"+this.dirs[i]+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
-            this.subdirs[i].push(x);
-            console.log(this.subdirs[i][j]);
+            x.download="<a href='../../../static/files/"+this.dirs[i].name+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
+            this.dirs[i].subdirs.push(x);
+            console.log(x.download);
+            // console.log(this.dirs[i].subdirs[j]);
             // this.subdirs[i][j].name=resp.dir[j];
             // this.subdirs[i][j].download="<a href='/static/files/"+this.dirs[i]+"/"+this.subdirs[i][j].name+"' download='"+this.subdirs[i][j].name+"'>立即下载</a>"
         }
+        this.$set(this.dirs,i,{name:this.dirs[i].name,subdirs:this.dirs[i].subdirs});
+            
+        // for (var dir in this.dirs)
+        // {
+        //     console.log(dir.name);
+        //     console.log(dir.subdirs);
+        // }
         
     }).then(()=>
              {
