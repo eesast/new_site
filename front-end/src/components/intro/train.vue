@@ -75,7 +75,8 @@ export default {
     created()
     {
         // console.log(x);
-        fetch("http://127.0.0.1:8888/backend/lecture/dir/",
+        // fetch("http://127.0.0.1:8888/backend/lecture/dir/",
+        fetch("http://future.eesast.com/backend/lecture/dir/",
          {
             method:'GET',
             headers:
@@ -121,7 +122,8 @@ export default {
       },
         GETSUB(i)
 {
-    fetch("http://127.0.0.1:8888/backend/lecture/subdir/"+this.dirs[i].name,
+    // fetch("http://127.0.0.1:8888/backend/lecture/subdir/"+this.dirs[i].name,
+    fetch("http://future.eesast.com/backend/lecture/subdir/"+this.dirs[i].name,
     {
         method:'GET',
         headers:
@@ -142,7 +144,8 @@ export default {
             // this.subdirs[i][j]=new Object();
             var x=new Object();
             x.name=resp.dir[j];;
-            x.download="<a href='../../../static/files/"+this.dirs[i].name+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
+            // x.download="<a href='../../../static/files/"+this.dirs[i].name+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
+            x.download="<a href='../../../../lecture_files/"+this.dirs[i].name+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
             this.dirs[i].subdirs.push(x);
             console.log(x.download);
             // console.log(this.dirs[i].subdirs[j]);
