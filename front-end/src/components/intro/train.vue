@@ -75,8 +75,8 @@ export default {
     created()
     {
         // console.log(x);
-        // fetch("http://127.0.0.1:8888/backend/lecture/dir/",
-        fetch("http://future.eesast.com/backend/lecture/dir/",
+        // fetch("http://127.0.0.1:8000/backend/lecture/dir/",
+        fetch("/backend/lecture/dir/",
          {
             method:'GET',
             headers:
@@ -122,8 +122,8 @@ export default {
       },
         GETSUB(i)
 {
-    // fetch("http://127.0.0.1:8888/backend/lecture/subdir/"+this.dirs[i].name,
-    fetch("http://future.eesast.com/backend/lecture/subdir/"+this.dirs[i].name,
+    // fetch("http://127.0.0.1:8000/backend/lecture/subdir/"+this.dirs[i].name,
+    fetch("/backend/lecture/subdir/"+this.dirs[i].name,
     {
         method:'GET',
         headers:
