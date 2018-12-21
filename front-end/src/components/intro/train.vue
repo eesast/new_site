@@ -4,10 +4,10 @@
         <div id="wrap">
             <el-tabs id="train-card" tab-position="left" v-model="activeName" @tab-click="handleClick"> 
             <!-- <template v-if="dirs"> -->
-            <el-tab-pane  v-for='(dir,index) in dirs' :label='dir.name' :name="index" id='card1'>
+            <el-tab-pane  v-for='(dir,index) in dirs' :label='dir.name.substring(2)' :name="index" id='card1'>
                 <el-card  class="box-card">
                     <div slot="header" class="clearfix">
-                    <span>{{dir.name}}</span>
+                    <span>{{dir.name.substring(2)}}</span>
                      </div>
                 
                     <el-table
@@ -144,7 +144,7 @@ export default {
             // this.subdirs[i][j]=new Object();
             var x=new Object();
             x.name=resp.dir[j];;
-            // x.download="<a href='../../../static/files/"+this.dirs[i].name+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
+            // x.download="<a href='../../../../../files/"+this.dirs[i].name+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
             x.download="<a href='../../../../lecture_files/"+this.dirs[i].name+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
             this.dirs[i].subdirs.push(x);
             console.log(x.download);
@@ -282,5 +282,43 @@ img {
     margin: 3% 0;
     padding-left: 5%;
     border-left: solid 5px rgba(100,100,100,0.5);
+}
+
+
+#train-card .el-tabs__item
+{
+    // color:red;
+    border-bottom:0.5px solid rgb(241, 245, 250);
+    // position:absolute;
+    left:0;
+    font-family:'SimHei';
+    font-weight: 550;
+    font-size:16px;
+}
+#train-card .el-tabs__item:hover
+{
+    background:#95c6f8;
+    color:white;
+}
+#train-card .el-tabs__item:active
+{
+    background:#95c6f8;
+    color:yellow;
+}
+
+.el-tabs--left .el-tabs__item.is-left {
+    text-align: center;
+}
+
+.clearfix
+{
+    font-family: 'Times New Roman';
+    font-weight: 600;
+    font-size:40px;
+}
+.el-table__body .el-table__row
+{
+    font-family: 'Times New Roman';
+    font-weight: 600;
 }
 </style>
