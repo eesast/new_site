@@ -6,9 +6,9 @@
             <!-- <template v-if="dirs"> -->
             <el-tab-pane  v-for='(dir,index) in dirs' :label='dir.name.substring(2)' :name="index" id='card1'>
                 <el-card  class="box-card">
-                    <div slot="header" class="clearfix">
+                    <!-- <div slot="header" class="clearfix">
                     <span>{{dir.name.substring(2)}}</span>
-                     </div>
+                     </div> -->
                 
                     <el-table
                     :data="dir.subdirs"
@@ -291,9 +291,9 @@ img {
     border-bottom:0.5px solid rgb(241, 245, 250);
     // position:absolute;
     left:0;
-    font-family:'SimHei';
-    font-weight: 550;
-    font-size:16px;
+    font-family:'Microsoft YaHei';
+    font-weight: 500;
+    font-size:15px;
 }
 #train-card .el-tabs__item:hover
 {
@@ -313,12 +313,12 @@ img {
 .clearfix
 {
     font-family: 'Times New Roman';
-    font-weight: 600;
+    font-weight: 500;
     font-size:40px;
 }
 .el-table__body .el-table__row
 {
     font-family: 'Times New Roman';
-    font-weight: 600;
+    font-weight: 500;
 }
 </style>
