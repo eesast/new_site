@@ -292,7 +292,8 @@ img {
     // position:absolute;
     left:0;
     font-family:'Microsoft YaHei';
-    font-weight: 500;
+    // color:green;
+    font-weight: 600;
     font-size:15px;
 }
 #train-card .el-tabs__item:hover
@@ -320,5 +321,6 @@ img {
 {
     font-family: 'Times New Roman';
     font-weight: 500;
+    color:rgb(59, 52, 126);
 }
 </style>
