@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <el-carousel :interval="10000" height="650px">
+    <el-carousel :interval="10000" height="700px">
       <el-carousel-item id="teamstyle1">
         <img src="../../static/teamstyle19.jpg">
       </el-carousel-item>

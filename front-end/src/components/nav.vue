@@ -7,10 +7,9 @@
           <h2>清华大学电子工程系学生科协</h2>
           <h3>Student Association of Science and Technology</h3>
         </div>
-      </div-->
-      <el-menu-item index="0" route="https://www.eesast.com/">EESAST</el-menu-item>
-      <el-menu-item index="1" id='img-submenu' route="/">
-        <img class="eesast" src="..\..\static\eesast.png"/>
+      </div-->    
+      <el-menu-item index="0" id='img-submenu' route="/">
+        <img class="eesast" src="..\..\static\eesast.png"/> <font id="text-eesast">EESAST</font>
       </el-menu-item>
       <el-menu-item index="2" route="/">首页</el-menu-item>
       <el-menu-item index="3" route="/intro/dep" @click.native="delstorage()">部门</el-menu-item>
@@ -60,25 +59,35 @@ export default {
 .eesast{
   height: 40px;
   width: 40px;
-  margin: 10px 60px;
+  margin: 10px 15px 10px 15px;
 }
 #img-submenu{
   border: none;
   cursor: default;
   background-color: #222831 !important;
 }
+#text-eesast{
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 200%;
+  font-weight: 400;
+  color:"#00ADB5";
+}
 ul, li {
   border: none;
   color: #00ADB5 !important;
+  font-size: 100%
+  /* color: antiquewhite !important; */
 }
 .el-submenu__title
 {
   border: none;
   color: #00ADB5 !important;
+  /* color:antiquewhite !important; */
 }
 .popup {
   padding: 0;
   margin: 0;
+  
 }
 
 /*.el-menu--horizontal {
