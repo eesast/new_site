@@ -11,4 +11,6 @@ def directory(request):
 
 def subdirectory(request,subdir):
 	dir = path.join(LECTURE_DIR,subdir)
-	return JsonResponse({'dir':listdir(dir)})
+	content = listdir(dir);
+	content = [x for x in content if x[-4:] != '.txt']
+	return JsonResponse({'dir':content})

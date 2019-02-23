@@ -147,7 +147,7 @@ export default {
             // x.download="<a href='../../../../../files/"+this.dirs[i].name+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
             x.download="<a href='../../../../lecture_files/"+this.dirs[i].name+"/"+x.name+"' download='"+x.name+"'>立即下载</a>";
             this.dirs[i].subdirs.push(x);
-            console.log(x.download);
+            // console.log(x.download);
             // console.log(this.dirs[i].subdirs[j]);
             // this.subdirs[i][j].name=resp.dir[j];
             // this.subdirs[i][j].download="<a href='/static/files/"+this.dirs[i]+"/"+this.subdirs[i][j].name+"' download='"+this.subdirs[i][j].name+"'>立即下载</a>"
