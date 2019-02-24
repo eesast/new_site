@@ -6,11 +6,15 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import 'swiper/dist/css/swiper.css';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper';
+import BootstrapVue from 'bootstrap-vue';
 
 
 Vue.use(VueAwesomeSwiper);
 Vue.use(ElementUI);
+Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false
 
