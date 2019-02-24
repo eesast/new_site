@@ -31,9 +31,27 @@
                 <p>提交作品需要具有一定的稳定性，尽可能的减少异常和出错的概率。</p>
                 <br/>
                 <br/>
+                <h4>精彩回顾</h4>
+                <p>2018年软件设计大赛优秀作品： </p>             
                 <div class='img-wrap'>
-                    <img src='../../../static/img/sdc.png'/>
-                    <p class='ia'>第一届软件设计大赛宣传海报</p>
+                    <img src='../../../static/img/sdc/calcpro.png'/>
+                    <p class='ia'>多功能计算器CalcPro</p>
+                </div>
+                <div class='img-wrap'>
+                    <img src='../../../static/img/sdc/BASIC-OS1.jpg'/>
+                    <p class='ia'>简易操作系统BASIC-OS1</p>
+                </div>
+                <div class='img-wrap'>
+                    <img src='../../../static/img/sdc/Net-Campus.jpg'/>
+                    <p class='ia'><a href="https://www.microsoft.com/store/apps/9PDVWNT4K1MW" target="_blank">校园网管理软件Net-Campus</a></p>
+                </div>
+                <div class='img-wrap'>
+                    <img src='../../../static/img/sdc/ernie.png'/>
+                    <p class='ia'><a href="http://www.raineggplant.com/ernie.html/" target="_blank">随机抽签软件Ernie</a></p>
+                </div>
+                <div class='img-wrap'>
+                    <img src='../../../static/img/sdc/cube-helper.jpg'/>
+                    <p class='ia'>魔方助手Cube Helper</p>
                 </div>
             </div>
         </div>

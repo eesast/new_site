@@ -1,6 +1,6 @@
 <template>
 <div class="wrap">
-    <intro-title i-title="ADI杯新生信息知识竞赛"></intro-title>
+    <intro-title i-title="新生信息知识竞赛"></intro-title>
     <div class="content">
         <div class="article">
             <h4>赛事时间</h4>
@@ -19,7 +19,15 @@
             </p>
             <div class='img-wrap'>
                 <img src='../../../static/img/ADI-1.jpg'/>
-                <p class='ia'>第十五届决赛照片</p>
+                <p class='ia'>第十五届决赛</p>
+            </div>
+            <div class='img-wrap'>
+                <img src='../../../static/img/FIC16.jpg'/>
+                <p class='ia'>第十六届决赛</p>
+            </div>
+            <div class='img-wrap'>
+                <img src='../../../static/img/FIC17.jpg'/>
+                <p class='ia'>第十七届决赛</p>
             </div>
         </div>
     </div>

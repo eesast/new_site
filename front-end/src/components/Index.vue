@@ -14,6 +14,42 @@
         <img src="../../static/edc.jpg">
       </el-carousel-item>
     </el-carousel>
+    <div id="depart-ctr">
+      <h2>我们的部门</h2>
+      <el-main id="department">
+        <router-link to="intro/dep" class="link-to-study" @click.native="selectnav('dep study')">
+          <el-card class="box-card"> 
+            <img src="../../static/cultivation.png"/>
+          <p>学培部</p>
+          </el-card>
+        </router-link>
+        <router-link to="intro/dep" class="link-to-software" @click.native="selectnav('dep software')">
+          <el-card class="box-card">
+          
+            <img src="../../static/software.png"/>
+            <p>软件部</p>
+          </el-card>
+        </router-link>   
+        <router-link to="intro/dep" class="link-to-hardware" @click.native="selectnav('dep hardware')">
+          <el-card class="box-card">
+              <img src="../../static/hardware.png"/>
+            <p>硬件部</p>  
+          </el-card>
+        </router-link>
+        <router-link to="intro/dep" class="link-to-project" @click.native="selectnav('dep project')">
+          <el-card class="box-card">  
+            <img src="../../static/project.png"/>
+            <p>项目部</p>   
+          </el-card>
+        </router-link>
+        <router-link to="intro/dep" class="link-to-department" @click.native="selectnav('dep propagate')">
+          <el-card class="box-card">     
+            <img src="../../static/scheme.png"/>
+            <p>宣策部</p>   
+          </el-card>
+        </router-link>
+      </el-main>
+    </div>
     <el-container>
       <!--el-aside width="30%">
         <h2>我们的部门</h2>
@@ -71,42 +107,10 @@
       </el-main>
 
     </el-container>
-    <div id="depart-ctr">
-      <h2>我们的部门</h2>
-      <el-main id="department">
-        <router-link to="intro/dep" class="link-to-study" @click.native="selectnav('dep study')">
-          <el-card class="box-card"> 
-            <img src="../../static/cultivation.png"/>
-          <p>学培部</p>
-          </el-card>
-        </router-link>
-        <router-link to="intro/dep" class="link-to-software" @click.native="selectnav('dep software')">
-          <el-card class="box-card">
-          
-            <img src="../../static/software.png"/>
-            <p>软件部</p>
-          </el-card>
-        </router-link>   
-        <router-link to="intro/dep" class="link-to-hardware" @click.native="selectnav('dep hardware')">
-          <el-card class="box-card">
-              <img src="../../static/hardware.png"/>
-            <p>硬件部</p>  
-          </el-card>
-        </router-link>
-        <router-link to="intro/dep" class="link-to-project" @click.native="selectnav('dep project')">
-          <el-card class="box-card">  
-            <img src="../../static/project.png"/>
-            <p>项目部</p>   
-          </el-card>
-        </router-link>
-        <router-link to="intro/dep" class="link-to-department" @click.native="selectnav('dep propagate')">
-          <el-card class="box-card">     
-            <img src="../../static/scheme.png"/>
-            <p>宣策部</p>   
-          </el-card>
-        </router-link>
-      </el-main>
-    </div>
+
+
+    
+  
   </div>
 </template>
 

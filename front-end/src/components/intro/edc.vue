@@ -16,6 +16,10 @@
                     <img src='../../../static/img/edc.jpg'/>
                     <p class='ia'>第十八届电子设计大赛——天赐良机</p>
                 </div>
+                <div class='img-wrap'>
+                    <img src='../../../static/img/edc19.jpg'/>
+                    <p class='ia'>第十九届电子设计大赛——绿茵荣耀</p>
+                </div>
             </div>
         </div>
     </div>
