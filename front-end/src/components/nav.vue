@@ -75,23 +75,33 @@ export default {
 ul, li {
   border: none;
   color: #00ADB5 !important;
-  font-size: 100%
+  font-size: 14px !important;
   /* color: antiquewhite !important; */
 }
 .el-submenu__title
 {
   border: none;
   color: #00ADB5 !important;
+
   /* color:antiquewhite !important; */
+}
+.el-menu {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+#img-submenu {
+  margin-right: calc(100vw - 530px);
 }
 .popup {
   padding: 0;
   margin: 0;
 }
-#train{
+/* #train{
   right: 0;
   position: absolute;
-}
+} */
 #home{
   right: 0;
   position: relative;
