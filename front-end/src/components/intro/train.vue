@@ -17,12 +17,14 @@
                     <el-table-column
                         prop="name"
                         label="名称"
-                        width="700">
+                        width="700" 
+                        align="center">
                     </el-table-column>
                     <el-table-column
                         prop="download"
                         label="下载地址"
-                        width="200">
+                        width="200"
+                        align="center">
                         <template slot-scope="scope">
                         <div v-html="scope.row.download"></div>
                         </template>
@@ -295,16 +297,19 @@ img {
     // color:green;
     font-weight: 600;
     font-size:15px;
+    text-align: center;
 }
 #train-card .el-tabs__item:hover
 {
     background:#95c6f8;
     color:white;
+    text-align: center;
 }
 #train-card .el-tabs__item:active
 {
     background:#95c6f8;
     color:yellow;
+    text-align: center;
 }
 
 .el-tabs--left .el-tabs__item.is-left {

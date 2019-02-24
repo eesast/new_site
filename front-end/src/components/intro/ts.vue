@@ -11,15 +11,19 @@
             </p>
             <h4>赛事精彩回顾</h4>
             <div class="img-wrap">
-                <img src='../../../static/img/ts-1.png'/>
+                <img src='../../../static/img/ts-1.jpg'/>
                 <p class='ia'>队式十六——深蓝(Deep Blue)</p>
             </div>
             <div class="img-wrap">
-                <img src='../../../static/img/ts-2.png'/>
+                <img src='../../../static/img/ts-2.jpg'/>
                 <p class='ia'>队式十七——Stellar craft</p>
             </div>
             <div class="img-wrap">
-                <img src='../../../static/img/ts-3.png'/>
+                <img src='../../../static/img/ts18.jpg'/>
+                <p class='ia'>队式十八——Cpclash</p>
+            </div>
+            <div class="img-wrap">
+                <img src='../../../static/img/ts-3.jpg'/>
                 <p class='ia'>2018年，队式十九作为A1组比赛合并到THU-AI中</p>
             </div>
         </div>

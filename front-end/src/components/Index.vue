@@ -1,19 +1,26 @@
 <template>
   <div class="hello">
-    <el-carousel :interval="10000" height="700px">
-      <el-carousel-item id="teamstyle1">
-        <img src="../../static/teamstyle19.jpg">
+    <!-- <el-carousel :interval="10000" style="card" height="cardHeight" >
+      <el-carousel-item v-for="item in items" :key="item">
+        <img v-bind:src="item.url" height="cardImageHeight">
       </el-carousel-item>
-      <el-carousel-item id="teamstyle2">
-        <img src="../../static/teamstyle-2.png">
-      </el-carousel-item>
-      <el-carousel-item id="software">
-        <img src="../../static/software-contest.png">
-      </el-carousel-item>
-      <el-carousel-item id="edc">
-        <img src="../../static/edc.jpg">
-      </el-carousel-item>
-    </el-carousel>
+    </el-carousel> -->
+    <template>
+    <div class="scroll">
+     <swiper :options="swiperOption" ref="mySwiper">
+       <!-- slides -->
+       <swiper-slide ><img src="../../static/img/all-members.jpg" ></swiper-slide>
+       <swiper-slide><img src="../../static/teamstyle19.jpg"></swiper-slide>
+       <swiper-slide><img src="../../static/edc.jpg"></swiper-slide>
+       <swiper-slide><img src="../../static/software-contest.png"></swiper-slide>
+       <!-- Optional controls -->
+       <div class="swiper-pagination "  slot="pagination"></div>
+       <div class="swiper-button-prev" slot="button-prev"></div>
+       <div class="swiper-button-next" slot="button-next"></div>
+       <!-- <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
+     </swiper> 
+  </div>
+ </template>
     <div id="depart-ctr">
       <h2>我们的部门</h2>
       <el-main id="department">
@@ -119,7 +126,20 @@ export default {
   name: 'Index',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      swiperOption: {//swiper3
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true
+          },
+        // effect: 'fade',
+        loop: true,
+        grabCursor: true,
+      },
+      msg: 'Welcome to Your Vue.js App',
     }
   },
   methods:
@@ -134,6 +154,7 @@ export default {
  
 }
 
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -145,7 +166,7 @@ h1, h2 {
 }
 
 .el-carousel {
-  background: black;
+  background:black;
 }
 
 .el-carousel__item {
@@ -219,4 +240,16 @@ h1, h2 {
 h3{
   font-size: 4em;
 }
+
+.swiper-slide {
+    width: 80%;
+    height: 50%;
+    /* background-position: center; */
+    /* background-size: cover; */
+    background-color: black;
+}
+
+
+
+
 </style>

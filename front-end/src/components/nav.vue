@@ -11,10 +11,10 @@
       <el-menu-item index="0" id='img-submenu' route="/">
         <img class="eesast" src="..\..\static\eesast.png"/> <font id="text-eesast">EESAST</font>
       </el-menu-item>
-      <el-menu-item index="2" route="/">首页</el-menu-item>
-      <el-menu-item index="3" route="/intro/dep" @click.native="delstorage()">部门</el-menu-item>
+      <el-menu-item index="2" route="/" id="home">首页</el-menu-item>
+      <el-menu-item index="3" route="/intro/dep" @click.native="delstorage()" id="dep">部门</el-menu-item>
       
-      <el-submenu index="4">
+      <el-submenu index="4" id="comp">
         <template slot="title" route="/intro" id="popup">赛事</template>
         <el-menu-item index="4-1" route="/intro/ts">队式设计大赛</el-menu-item>
         <el-menu-item index="4-2" route="/intro/edc">电子设计大赛</el-menu-item>
@@ -23,7 +23,7 @@
         <el-menu-item index="4-5" route="/intro/cc">挑战杯</el-menu-item>
         <el-menu-item index="4-6" route="/intro/ADI">新生知识竞赛</el-menu-item>        
       </el-submenu>
-      <el-menu-item index="4" route="/intro/train">培训</el-menu-item>
+      <el-menu-item index="4" route="/intro/train" id="train">培训</el-menu-item>
     </el-menu>
   </div>
 </template>
@@ -87,7 +87,14 @@ ul, li {
 .popup {
   padding: 0;
   margin: 0;
-  
+}
+#train{
+  right: 0;
+  position: absolute;
+}
+#home{
+  right: 0;
+  position: relative;
 }
 
 /*.el-menu--horizontal {
