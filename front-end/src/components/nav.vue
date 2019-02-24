@@ -19,9 +19,9 @@
         <el-menu-item index="4-1" route="/intro/ts">队式设计大赛</el-menu-item>
         <el-menu-item index="4-2" route="/intro/edc">电子设计大赛</el-menu-item>
         <el-menu-item index="4-3" route="/intro/hdc">硬件设计大赛</el-menu-item>
-        <el-menu-item index="4-4" route="/intro/cc">挑战杯</el-menu-item>
-        <el-menu-item index="4-5" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>
-        <el-menu-item index="4-6" route="/intro/sdc">队式软件设计大赛</el-menu-item>
+        <el-menu-item index="4-4" route="/intro/sdc">软件设计大赛</el-menu-item>
+        <el-menu-item index="4-5" route="/intro/cc">挑战杯</el-menu-item>
+        <el-menu-item index="4-6" route="/intro/ADI">ADI杯新生知识竞赛</el-menu-item>        
       </el-submenu>
       <el-menu-item index="4" route="/intro/train">培训</el-menu-item>
     </el-menu>
