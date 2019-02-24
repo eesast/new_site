@@ -19,7 +19,7 @@
       <b-carousel-slide
         caption="Big Family"
         text="A Group of Intersting People"
-        img-src="../../static/index/index-1.png"
+        img-src="../../static/index/index-1.jpg"
       />
 
       <!-- Slides with custom text -->
