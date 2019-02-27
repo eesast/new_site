@@ -79,10 +79,13 @@
 </template>
 
 <script>
-import '../../../static/css/article.css';
+// import '../../../static/css/article.css';
 import IntroTitle from './IntroTitle';
 export default {
   name: 'cc',
   components: { IntroTitle },
 }
 </script>
+<style scoped>
+@import '../../../static/css/article.css';
+</style>

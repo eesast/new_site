@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <h1>部门介绍</h1>
+    <div >
+        <intro-title i-title="部门介绍"></intro-title>
+        <!-- <h1>部门介绍</h1> -->
         <div id="wrap">
             <div class="dep software" id="dep software">
                 <div class="article">
@@ -103,8 +104,10 @@
     </div>
 </template>
 <script>
+import IntroTitle from './IntroTitle';
 export default {
     name: "dep",
+    components: { IntroTitle },
     mounted:function()
     {
         this.getlocal();
@@ -124,7 +127,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 h1 {
     width: 70%;
     padding-bottom: 20px;
