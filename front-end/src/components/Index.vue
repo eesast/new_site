@@ -1,28 +1,49 @@
 <template>
   <div class="hello">
-    <!-- <el-carousel :interval="10000" style="card" height="cardHeight" >
-      <el-carousel-item v-for="item in items" :key="item">
-        <img v-bind:src="item.url" height="cardImageHeight">
-      </el-carousel-item>
-    </el-carousel> -->
-    <template>
-    <div class="scroll">
-     <swiper :options="swiperOption" ref="mySwiper">
-       <!-- slides -->
-       <swiper-slide ><img src="../../static/img/all-members.jpg" ></swiper-slide>
-       <swiper-slide><img src="../../static/teamstyle19.jpg"></swiper-slide>
-       <swiper-slide><img src="../../static/edc.jpg"></swiper-slide>
-       <swiper-slide><img src="../../static/software-contest.png"></swiper-slide>
-       <!-- Optional controls -->
-       <div class="swiper-pagination "  slot="pagination"></div>
-       <div class="swiper-button-prev" slot="button-prev"></div>
-       <div class="swiper-button-next" slot="button-next"></div>
-       <!-- <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
-     </swiper> 
-  </div>
- </template>
+    <div>
+    <b-carousel
+      id="carousel1"
+      style="text-shadow: 1px 1px 2px #333;"
+      fade="true"
+      controls
+      indicators
+      background="#222831"
+      :interval="4000"
+      img-width="1024"
+      img-height="480"
+      v-model="slide"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+      <!-- Text slides with image -->
+      <b-carousel-slide
+        caption="Big Family"
+        text="A Group of Intersting People"
+        img-src="../../static/index/index-1.jpg"
+      />
+
+      <!-- Slides with custom text -->
+      <b-carousel-slide img-src="../../static/index/index-4.png" >
+        <h1>Tsinghua Electronic Competition</h1>
+      </b-carousel-slide>
+
+      <!-- Slides with image only -->
+      <b-carousel-slide img-src="../../static/index/index-2.png" >
+        <h1>TeamStyle</h1>
+      </b-carousel-slide>
+      
+
+      <!-- Slides with img slot -->
+      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+      <b-carousel-slide img-src="../../static/index/index-3.png" >
+        <h1>Software Design Competition</h1>
+      </b-carousel-slide>
+
+    </b-carousel>
+  </div> 
     <div id="depart-ctr">
-      <h2>我们的部门</h2>
+      <!-- </br>
+      <h2>我们的部门</h2> -->
       <el-main id="department">
         <router-link to="intro/dep" class="link-to-study" @click.native="selectnav('dep study')">
           <el-card class="box-card"> 
@@ -126,6 +147,8 @@ export default {
   name: 'Index',
   data () {
     return {
+      slide: 0,
+      sliding: null,
       swiperOption: {//swiper3
         navigation: {
             nextEl: '.swiper-button-next',
@@ -149,6 +172,12 @@ export default {
       // console.log(selectindex);
       let selectedindex=selectindex;
       localStorage.setItem('id',selectedindex);
+    },
+    onSlideStart(slide) {
+        this.sliding = true
+    },
+    onSlideEnd(slide) {
+        this.sliding = false
     }
   }
  

@@ -177,7 +177,7 @@ export default {
 }
 
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 h1 {
     width: 70%;
     padding-bottom: 20px;

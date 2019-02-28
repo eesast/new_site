@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#222831" text-color="#00ADB5" active-text-color="#00ADB5" router>
       <!--zdiv class="top">
         <div id="title">
