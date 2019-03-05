@@ -112,6 +112,10 @@ export default {
     {
         this.getlocal();
     },
+    created:function()
+    {
+        this.getlocal();
+    },
     methods:
     {
         getlocal: function()
@@ -121,7 +125,12 @@ export default {
             let anchorElement=document.getElementById(select);
             if(select)
             {
-                anchorElement.scrollIntoView();
+                anchorElement.scrollIntoView(false);
+                // var t=document.createElement("input");
+                // t.type="text";
+                // anchorElement.insertBefore(t,null);//===============
+                // t.focus();
+                // anchorElement.removeChild(t);
             }
         }
     }
