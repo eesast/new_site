@@ -2,7 +2,7 @@
   <div class="hello">
     <div>
     <b-carousel
-      id="carousel1"
+      class="carousel1"
       style="text-shadow: 1px 1px 2px #333;"
       fade
       controls
@@ -41,9 +41,8 @@
 
     </b-carousel>
   </div> 
-    <div id="depart-ctr">
-      <!-- </br>
-      <h2>我们的部门</h2> -->
+    <b-container id="depart-ctr">
+      <!-- <h2 class="mt-5">我们的部门</h2> -->
       <el-main id="department">
         <router-link to="intro/dep" class="link-to-study" @click.native="selectnav('dep study')">
           <el-card class="box-card"> 
@@ -77,8 +76,7 @@
           </el-card>
         </router-link>
       </el-main>
-    </div>
-    <el-container>
+    </b-container>
       <!--el-aside width="30%">
         <h2>我们的部门</h2>
         <el-card class="box-card">
@@ -103,7 +101,54 @@
         </el-card>
       </el-aside-->
 
-      <el-main>
+      <b-container class="item-card mb-5">
+        <b-card-group deck class = "d-flex flex-column text-center w-100 h-100">
+          <b-card img-src="../../static/weekly2.jpg" img-alt="Card image" img-left img-width="75%">
+          <b-card-body class = "d-flex flex-column text-center h-100">
+            <b-card-title class="mt-4 mb-5" title-tag="h2">
+              SAST WEEKLY
+            </b-card-title>
+            <b-card-sub-title class="mt-5 mb-5" sub-title-tag="h5" sub-title-text-variant="secondary">
+              讲述最近学到的知识</br></br>了解新奇的东西
+            </b-card-sub-title>
+            <a href="https://weekly.eesast.com">
+            <b-button variant="outline-dark" class="mt-5 mb-5">开始写作</b-button>
+            </a>
+          </b-card-body>
+          </b-card>
+          
+
+          <b-card img-src="../../static/lecture.jpg" img-alt="Card image" img-right img-width="75%" class="mt-5">
+            <b-card-body class = "d-flex flex-column text-center h-100">
+            <b-card-title class="mt-4 mb-5" title-tag="h2">
+              SAST TUTOR
+            </b-card-title>
+            <b-card-sub-title class="mt-5 mb-5" sub-title-tag="h5" sub-title-text-variant="secondary">
+              为你提供讲解</br></br>一步步带你入门
+            </b-card-sub-title>
+            <b-link to="/intro/train">
+            <b-button variant="outline-primary" class="mt-5 mb-5">立即查看</b-button>
+            </b-link>
+          </b-card-body>
+          </b-card>
+
+          <b-card img-src="../../static/circuit.jpg" img-alt="Card image" img-left img-width="75%" class="mt-5">
+            <b-card-body class = "d-flex flex-column text-center h-100">
+            <b-card-title class="mt-5 mb-5" title-tag="h2">
+              启航计划
+            </b-card-title>
+            <b-card-sub-title class="mt-5 mb-5" sub-title-tag="h5" sub-title-text-variant="secondary">
+              开发你的潜力</br></br>深入接触科研
+            </b-card-sub-title>
+            <b-link to="#">
+            <b-button variant="outline-danger" class="mt-5 mb-5">稍后开放</b-button>
+            </b-link>
+          </b-card-body>
+          </b-card>
+
+        </b-card-group>
+      </b-container>
+      <!-- <el-main>
 
         <el-row>
           <img src="../../static/activity.jpg"/>
@@ -132,9 +177,8 @@
           </div>    
         </el-row>
 
-      </el-main>
+      </el-main> -->
 
-    </el-container>
 
 
     
@@ -194,13 +238,8 @@ h1, h2 {
   font-weight: normal;
 }
 
-.el-carousel {
-  background:black;
-}
-
-.el-carousel__item {
-  width: 64%;
-  margin: 0 18%;
+.item-card {
+  height: 1600px;
 }
 
 .box-card {

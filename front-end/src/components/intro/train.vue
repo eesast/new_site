@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>培训资料</h1>
+        <intro-title i-title='培训资料'></intro-title>
         <div id="wrap">
             <el-tabs id="train-card" tab-position="left" v-model="activeName" @tab-click="handleClick"> 
             <!-- <template v-if="dirs"> -->
@@ -71,9 +71,12 @@
         </div>
     </div>
 </template>
+
 <script>
+import IntroTitle from './IntroTitle';
 export default {
     name: "train",
+    components: { IntroTitle },
     created()
     {
         // console.log(x);
@@ -221,63 +224,6 @@ img {
     text-decoration:none; 
     color:black;
 }
-// #tab-first{
-    
-//     background: #b1b4bb;
-// }
-// #tab-second{
-    
-//     background: rgb(208, 212, 219);
-// }
-// #tab-third{
-    
-//     background: #DCDFE6;
-// }
-// #tab-fourth{
-    
-//     background: #E4E7ED;
-// }
-// #tab-fifth{
-    
-//     background: #EBEEF5;
-// }
-// #tab-sixth{
-    
-//     background: #F2F6FC;
-// }
-// #tab-seventh{
-    
-//     background: rgb(249, 250, 253);
-// }
-
-// .train {
-//     width: 70%;
-//     margin: 0 auto;
-//     padding: 2% 0;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: flex-start;
-//     border-top: solid 1px rgba(100,100,100,0.5);
-// }
-// .python {
-//     border: none;
-// }
-/*
-.hardware {
-    order: 2;
-}
-.project {
-    order: 3;
-}
-.study {
-    order: 4;
-}*/
-// .article {
-//     order: 1;
-//     padding: 3% 10% 3% 2%;
-//     text-align: left;
-// }
 .title {
     order: 2;
     width: 40%;

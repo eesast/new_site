@@ -11,7 +11,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import BootstrapVue from 'bootstrap-vue';
 
-
 Vue.use(VueAwesomeSwiper);
 Vue.use(ElementUI);
 Vue.use(BootstrapVue);

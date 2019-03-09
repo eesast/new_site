@@ -1,6 +1,6 @@
 <template>
-  <div class="footer">
-    <div class="contact">
+  <b-row class="footer justify-content-md-center mt-5">
+    <b-column class="contact">
       <h4>联系我们</h4>
       <div class="contact_container">
         <a href="">
@@ -12,10 +12,10 @@
       </div>
       
       
-    </div>
+    </b-column>
     
     
-    <div class="support">
+    <b-column class="support">
       <h4>技术支持</h4>
       <a href="https://www.djangoproject.com/">
         <img src="../../static/django.svg" /></a>
@@ -25,8 +25,10 @@
         <img src="../../static/elementui.svg"/></a>
       <a href="https://github.com/">
         <img src="../../static/github.svg"/></a>
-    </div>
-  </div>
+      <a href="https://bootstrap-vue.js.org/">
+        <img src="../../static/BV.png"/></a>
+    </b-column>
+  </b-row>
 </template>
 
 <script>
@@ -52,7 +54,7 @@ export default {
 
 .contact {
   order: 1;
-  width: 15%;
+  width: 20%;
   padding: 0 4%;
   vertical-align: middle;
   text-align: center;
