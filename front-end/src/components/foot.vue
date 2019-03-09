@@ -4,7 +4,7 @@
       <h4>联系我们</h4>
       <div class="contact_container">
         <a href="">
-          <img src="..\..\static\github.svg"/>Github</a>
+          <img src="../../static/github.svg"/>Github</a>
       </div>
       <div class="contact_container">
         <a href="">

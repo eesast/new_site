@@ -232,6 +232,9 @@ img {
     border-left: solid 5px rgba(100,100,100,0.5);
 }
 
+#wrap {
+    margin-top: 2%;
+}
 
 #train-card .el-tabs__item
 {
