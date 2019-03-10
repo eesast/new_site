@@ -112,10 +112,6 @@ export default {
     {
         this.getlocal();
     },
-    created:function()
-    {
-        this.getlocal();
-    },
     methods:
     {
         getlocal: function()

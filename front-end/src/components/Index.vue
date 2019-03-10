@@ -45,37 +45,37 @@
       <!-- </br>
       <h2>我们的部门</h2> -->
       <el-main id="department">
-        <router-link to="intro/dep" class="link-to-study" @click.native="selectnav('dep study')">
+        <a  class="link-to-study" @click="selectnav('dep study','intro/dep')">
           <el-card class="box-card"> 
             <img src="../../static/cultivation.png"/>
           <p>学培部</p>
           </el-card>
-        </router-link>
-        <router-link to="intro/dep" class="link-to-software" @click.native="selectnav('dep software')">
+        </a>
+        <a  class="link-to-software" @click="selectnav('dep software','intro/dep')">
           <el-card class="box-card">
           
             <img src="../../static/software.png"/>
             <p>软件部</p>
           </el-card>
-        </router-link>   
-        <router-link to="intro/dep" class="link-to-hardware" @click.native="selectnav('dep hardware')">
+        </a>   
+        <a  class="link-to-hardware" @click="selectnav('dep hardware','intro/dep')">
           <el-card class="box-card">
               <img src="../../static/hardware.png"/>
             <p>硬件部</p>  
           </el-card>
-        </router-link>
-        <router-link to="intro/dep" class="link-to-project" @click.native="selectnav('dep project')">
+        </a>
+        <a  class="link-to-project" @click="selectnav('dep project','intro/dep')">
           <el-card class="box-card">  
             <img src="../../static/project.png"/>
             <p>项目部</p>   
           </el-card>
-        </router-link>
-        <router-link to="intro/dep" class="link-to-department" @click.native="selectnav('dep propagate')">
+        </a>
+        <a  class="link-to-department" @click="selectnav('dep propagate','intro/dep')">
           <el-card class="box-card">     
             <img src="../../static/scheme.png"/>
             <p>宣策部</p>   
           </el-card>
-        </router-link>
+        </a>
       </el-main>
     </div>
     <el-container>
@@ -167,11 +167,16 @@ export default {
   },
   methods:
   {
-    selectnav(selectindex)
+    selectnav(selectindex,to)
     {
       // console.log(selectindex);
       let selectedindex=selectindex;
       localStorage.setItem('id',selectedindex);
+      //先存，然后跳转
+
+       this.$router.push({
+                path: to,
+        })
     },
     onSlideStart(slide) {
         this.sliding = true
