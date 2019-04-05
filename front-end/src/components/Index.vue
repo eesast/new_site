@@ -101,9 +101,8 @@
         </el-card>
       </el-aside-->
 
-      <b-container class="item-card mb-5">
-        <b-card-group deck class = "d-flex flex-column text-center w-100 h-100">
-          <b-card img-src="../../static/weekly2.jpg" img-alt="Card image" img-left img-width="75%">
+      <b-container>
+          <b-card img-src="../../static/weekly2.jpg" img-left img-width="75%" img-height="550px" class="mt-5">
           <b-card-body class = "d-flex flex-column text-center h-100">
             <b-card-title class="mt-4 mb-5" title-tag="h2">
               SAST WEEKLY
@@ -118,7 +117,8 @@
           </b-card>
           
 
-          <b-card img-src="../../static/lecture.jpg" img-alt="Card image" img-right img-width="75%" class="mt-5">
+          <b-card img-src="../../static/lecture.jpg" img-width="75%" img-height="550px" img-right class="mt-5">
+            <!-- <b-card-img src="../../static/lecture.jpg" right width="75%" height="75%"></b-card-img> -->
             <b-card-body class = "d-flex flex-column text-center h-100">
             <b-card-title class="mt-4 mb-5" title-tag="h2">
               SAST TUTOR
@@ -132,9 +132,9 @@
           </b-card-body>
           </b-card>
 
-          <b-card img-src="../../static/circuit.jpg" img-alt="Card image" img-left img-width="75%" class="mt-5">
+          <b-card img-src="../../static/circuit.jpg" img-alt="Card image" img-left img-width="75%" img-height="550px" class="mt-5">
             <b-card-body class = "d-flex flex-column text-center h-100">
-            <b-card-title class="mt-5 mb-5" title-tag="h2">
+            <b-card-title class="mt-4 mb-5" title-tag="h2">
               启航计划
             </b-card-title>
             <b-card-sub-title class="mt-5 mb-5" sub-title-tag="h5" sub-title-text-variant="secondary">
@@ -145,8 +145,6 @@
             </b-link>
           </b-card-body>
           </b-card>
-
-        </b-card-group>
       </b-container>
       <!-- <el-main>
 
