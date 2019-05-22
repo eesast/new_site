@@ -53,6 +53,20 @@
                     <img src='../../../static/img/sdc/cube-helper.jpg'/>
                     <p class='ia'>魔方助手Cube Helper</p>
                 </div>
+                <br/><br/><br/><br/>
+                <p>2019年软件设计大赛优秀作品： </p>             
+                <div class='img-wrap'>
+                    <img src='../../../static/img/sdc/musicgame.png'/>
+                    <p class='ia'><a href="http://www.tunestory.cn" target="_blank">音乐节奏游戏TuneStory</a></p>
+                </div>
+                <div class='img-wrap'>
+                    <img src='../../../static/img/sdc/lowpoly.png'/>
+                    <p class='ia'>三角形滤镜LowPoly</p>
+                </div>
+                 <div class='img-wrap'>
+                    <img src='../../../static/img/sdc/plotter.png'/>
+                    <p class='ia'><a href="http://www.johnao.tk/plotter" target="_blank">在线多功能绘图</a></p>
+                </div>
             </div>
         </div>
     </div>

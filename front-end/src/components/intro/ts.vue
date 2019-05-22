@@ -26,6 +26,10 @@
                 <img src='../../../static/img/ts-3.jpg'/>
                 <p class='ia'>2018年，队式十九作为A1组比赛合并到THU-AI中</p>
             </div>
+            <div class="img-wrap">
+                <img src='../../../static/img/ts-4.jpg'/>
+                <p class='ia'>队式二十——THU-AI枪林弹雨组</p>
+            </div>
         </div>
     </div>
 </div>

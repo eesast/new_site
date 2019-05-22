@@ -15,7 +15,7 @@
       
       <el-submenu index="4" id="comp">
         <template slot="title" route="/intro" id="popup">赛事</template>
-        <el-menu-item index="4-1" route="/intro/ts">队式设计大赛</el-menu-item>
+        <el-menu-item index="4-1" route="/intro/ts">队式设计大赛(AI挑战赛)</el-menu-item>
         <el-menu-item index="4-2" route="/intro/edc">电子设计大赛</el-menu-item>
         <el-menu-item index="4-3" route="/intro/hdc">硬件设计大赛</el-menu-item>
         <el-menu-item index="4-4" route="/intro/sdc">软件设计大赛</el-menu-item>

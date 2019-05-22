@@ -28,7 +28,7 @@
       </b-carousel-slide>
 
       <!-- Slides with image only -->
-      <b-carousel-slide img-src="../../static/index/index-2.png" >
+      <b-carousel-slide img-src="../../static/index/index-2.jpg" >
         <h1>TeamStyle</h1>
       </b-carousel-slide>
       
