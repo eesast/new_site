@@ -18,7 +18,7 @@
       <!-- Text slides with image -->
       <b-carousel-slide
         caption="Big Family"
-        text="A Group of Intersting People"
+        text="A Group of Interesting People"
         img-src="../../static/index/index-1.jpg"
       />
 
