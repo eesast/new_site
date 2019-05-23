@@ -23,7 +23,7 @@
       />
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="../../static/index/index-4.png" >
+      <b-carousel-slide img-src="../../static/index/index-4.jpg" >
         <h1>Tsinghua Electronic Competition</h1>
       </b-carousel-slide>
 
@@ -35,7 +35,7 @@
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide img-src="../../static/index/index-3.png" >
+      <b-carousel-slide img-src="../../static/index/index-3.jpg" >
         <h1>Software Design Competition</h1>
       </b-carousel-slide>
 
